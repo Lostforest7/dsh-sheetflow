@@ -4,7 +4,7 @@
 
 > **Financial disclaimer:** SheetFlow assists with data preparation and reconciliation review. It does not provide accounting, tax or financial advice and is not an accounting system. AI mappings and all exported amounts, formulas and exceptions require independent review before business use. Acknowledging an exception does not resolve it or approve a payment.
 
-**0.1.0 local preview:** tested on Windows with Node 24.19.0 and DSH Web 0.2.0-rc.2. Chinese / English workbench. Three examples plus one newly created synthetic blind dataset verified. A real `deepseek-v4-pro` / `max` run proposed the correct columns but needed **two source-header-row corrections** before export. This is one assisted success, not proof of unattended mapping or production workbook compatibility. See the [real model review](docs/real-model-validation.md). No GitHub or npm release yet.
+**v0.1.0-pre preview:** tested on Windows with Node 24.19.0 and DSH Web 0.2.0-rc.2. Chinese / English workbench. Three examples plus one newly created synthetic blind dataset verified. A real `deepseek-v4-pro` / `max` run proposed the correct columns but needed **two source-header-row corrections** before export. This is one assisted success, not proof of unattended mapping or production workbook compatibility. See the [real model review](docs/real-model-validation.md). [GitHub Pre-release downloads](https://github.com/Lostforest7/dsh-sheetflow/releases/tag/v0.1.0-pre); no npm publication for this preview.
 
 [中文](README.zh-CN.md) · [Compatibility](docs/compatibility.md) · [Validation evidence](docs/validation.md) · [Recipe format](docs/recipes.md)
 

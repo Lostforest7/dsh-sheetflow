@@ -1,6 +1,6 @@
 # 真实 DeepSeek 盲测与导出验收
 
-日期：2026-10-01。测试使用新建合成数据，不含真实客户或银行数据。未上传 GitHub，等待产品终审。
+日期：2026-10-01。测试使用新建合成数据，不含真实客户或银行数据。原生 Excel 五项检查通过，用户已明确授权 GitHub Pre-release；[发布授权记录](releases/release-approval.json)。
 
 ## 结论
 
@@ -75,7 +75,7 @@ PM 原先要求用户按照[发布前人工验收指引](manual-excel-check.md)�
 
 [原生验收记录及 7 张截图](evidence/2026-10-01/excel-verification.json) · [仅工作表单元格的原生 UI 读取记录](evidence/2026-10-01/excel-ui-observations.json)。编辑过程中 Excel 的辅助功能文字有一帧延迟，临时 −6.00 结果以实际原生截图为准；UIA 直接设值未提交，最终通过 F2 编辑、输入、回车完成测试。
 
-这是 **Codex 按用户委托代操作的 Excel 验收**，不能写成用户本人手动签字。五项已通过，GitHub 发布仍等待用户明确回复“Excel 检查通过”，不提前建仓或上传。
+这是 **Codex 按用户委托代操作的 Excel 验收**，不能写成用户本人手动签字。五项已通过；用户于本次发布请求明确回复 **“Excel 检查通过，同意发布”**，授权建仓、推送并发布 GitHub Pre-release。
 
 ![合成示例数据：Microsoft Excel 原生重算与八行明细](evidence/2026-10-01/05-excel-overview.jpg)
 
@@ -89,4 +89,4 @@ PM 原先要求用户按照[发布前人工验收指引](manual-excel-check.md)�
 
 严格 TypeScript 检查、26 项核心测试、3 项浏览器测试、生产构建通过。新回归覆盖空白行上方标题、实际表头行号和样本绝对行号。真实模型测试使用改进前安装包；改进后代码经过上述自动检查，尚未增加真实 API 调用。
 
-README 中英版本顶部已加财务免责声明，演示截图注明合成示例数据。PM 已附条件通过；只有用户明确回复“Excel 检查通过”后才创建 GitHub 仓库、push main 和发布 v0.1.0-pre Pre-release。本次不发布 npm。凭据、启动访问令牌、DSH 私有配置、会话存储和工作目录不放进交付证据。
+README 中英版本顶部已加财务免责声明，演示截图注明合成示例数据。用户明确回复“Excel 检查通过，同意发布”，放行 `dsh-sheetflow` 建仓、push main 和 `v0.1.0-pre` GitHub Pre-release。此授权不等同用户本人操作 Excel 或财务签字。本次不发布 npm。凭据、启动访问令牌、DSH 私有配置、会话存储和工作目录不放进交付证据。

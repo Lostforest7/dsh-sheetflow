@@ -8,8 +8,11 @@
   "title": "DSH SheetFlow v0.1.0-pre — AI suggests, you confirm, SheetFlow executes",
   "prerelease": true,
   "bodyFile": "docs/releases/v0.1.0-pre.md",
-  "status": "prepared locally; not uploaded",
-  "publishGate": "User explicitly replies: Excel 检查通过",
+  "status": "approved for GitHub Pre-release distribution",
+  "publishGate": "satisfied on 2026-10-01: user explicitly replied Excel 检查通过，同意发布",
+  "approvalFile": "docs/releases/release-approval.json",
+  "repositoryUrl": "https://github.com/Lostforest7/dsh-sheetflow",
+  "releaseUrl": "https://github.com/Lostforest7/dsh-sheetflow/releases/tag/v0.1.0-pre",
   "excelManualReview": "not performed by human; user explicitly delegated native UI check to Codex",
   "excelNativeReview": "five checks passed in Microsoft Excel 16.0.20326.20158; temporary edit undone; closed without saving; workbook hash unchanged",
   "excelEvidence": "docs/evidence/2026-10-01/excel-verification.json",
@@ -19,9 +22,9 @@
     "dist/dsh-sheetflow-0.1.0-source.zip",
     "dist/dsh-sheetflow-validation-20261001.zip"
   ],
-  "beforePublication": [
-    "Wait for the user's explicit Excel 检查通过 release confirmation; update gate statements with the actual delegated Excel result and user approval, never claiming a human manual sign-off.",
-    "Confirm the authenticated GitHub owner and adjust draft links if necessary.",
+  "publicationSteps": [
+    "Recorded the user's explicit release confirmation and delegated Excel result in release-approval.json; no human manual sign-off is claimed.",
+    "Authenticated GitHub owner confirmed: Lostforest7.",
     "Create the repository, push main and v0.1.0-pre, then create a GitHub Pre-release only."
   ]
 }

@@ -221,9 +221,12 @@
     "checkedAfterClose": true
   },
   "publication": {
-    "githubPublished": false,
-    "npmPublished": false,
-    "userReleaseConfirmation": "pending; previous explicit gate requires Excel 检查通过"
+    "userReleaseConfirmation": "approved on 2026-10-01: Excel 检查通过，同意发布",
+    "approvalRecord": "../../releases/release-approval.json",
+    "repositoryUrl": "https://github.com/Lostforest7/dsh-sheetflow",
+    "releaseUrl": "https://github.com/Lostforest7/dsh-sheetflow/releases/tag/v0.1.0-pre",
+    "distribution": "GitHub Pre-release v0.1.0-pre",
+    "npmPublished": false
   },
   "screenshots": [
     {

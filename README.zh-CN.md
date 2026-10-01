@@ -4,7 +4,7 @@
 
 > **财务免责声明：**SheetFlow 用于数据整理与对账复核，不提供会计、税务或财务建议，也不是记账系统。AI 映射及导出的金额、公式和异常，投入业务使用前均需独立核验。勾选“已核对”仅记录复核，不代表异常已解决或款项已获批准。
 
-**0.1.0 本地预览版：**已在 Windows、Node 24.19.0、DSH Web 0.2.0-rc.2 上验证，提供中英文工作台。三组样例及一组新建盲测均为合成数据。真实 `deepseek-v4-pro` / `max` 识别对了列映射，但需要**修正两处来源表头行号**才能导出；这仅证明一次经复核的闭环，未证明全自动映射或真实业务兼容性。[本轮完整记录](docs/real-model-validation.md)。目前未发布 GitHub 或 npm。
+**v0.1.0-pre 预览版：**已在 Windows、Node 24.19.0、DSH Web 0.2.0-rc.2 上验证，提供中英文工作台。三组样例及一组新建盲测均为合成数据。真实 `deepseek-v4-pro` / `max` 识别对了列映射，但需要**修正两处来源表头行号**才能导出；这仅证明一次经复核的闭环，未证明全自动映射或真实业务兼容性。[本轮完整记录](docs/real-model-validation.md)。[GitHub Pre-release 下载](https://github.com/Lostforest7/dsh-sheetflow/releases/tag/v0.1.0-pre)；本预览版不发布 npm。
 
 [English](README.md) · [兼容性与限制](docs/compatibility.md) · [验证记录](docs/validation.md) · [规则格式](docs/recipes.md)
 
@@ -78,4 +78,4 @@ npm run dev
 
 开发检查：`npm run check`、`npm run test:e2e`。浏览器测试优先使用 Windows 已安装的 Google Chrome，否则执行 `npx playwright install chromium`。DSH 预发布依赖图采用 `.npmrc` 的兼容解析方式；DSH 运行程序请单独按官方说明安装。
 
-MIT 许可。真实模型复核记录已提供；真实业务样表和复杂工作簿仍需验证，发布等待终审。
+MIT 许可。真实模型复核记录已提供；真实业务样表和复杂工作簿仍需验证。用户已于 2026-10-01 明确确认验收并授权 GitHub Pre-release 发布，详见[发布记录](docs/releases/release-approval.json)。

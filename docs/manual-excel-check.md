@@ -2,7 +2,7 @@
 
 请在 Microsoft Excel 中手动打开 [本次导出文件](evidence/2026-10-01/sheetflow-5f0488c3-ca91-4fb4-a111-980b99fff04a.xlsx)，工作表为 **9月核销**。以下指引保留供人工复核。
 
-**本轮执行结果：**2026-10-01，用户明确委托 Codex 使用电脑插件代操作 Microsoft Excel 原生界面，五项检查全部通过。未使用加载项；临时改值已撤销，关闭时选择“不保存”，文件 SHA-256 未变。这是 Codex 代操作的应用验收，不是用户本人手动签字。[原生截图与逐格结果](evidence/2026-10-01/excel-verification.json)。GitHub 发布仍等待用户按已约定门禁明确回复“Excel 检查通过”。
+**本轮执行结果：**2026-10-01，用户明确委托 Codex 使用电脑插件代操作 Microsoft Excel 原生界面，五项检查全部通过。未使用加载项；临时改值已撤销，关闭时选择“不保存”，文件 SHA-256 未变。这是 Codex 代操作的应用验收，不是用户本人手动签字。[原生截图与逐格结果](evidence/2026-10-01/excel-verification.json)。用户随后于本次发布请求明确回复 **“Excel 检查通过，同意发布”**，授权 GitHub Pre-release；[授权记录](releases/release-approval.json)。
 
 文件相对路径：`docs/evidence/2026-10-01/sheetflow-5f0488c3-ca91-4fb4-a111-980b99fff04a.xlsx`。
 
@@ -25,4 +25,4 @@
 
 负金额可能显示为红色括号，这是模板格式。完整编号格式为 `RV-2609-001` 至 `RV-2609-008`。所有数据均为合成示例数据。
 
-五项均通过后，请回复 **“Excel 检查通过”**。如果有一项不符，请说明单元格地址和实际显示内容。收到明确通过结果后才创建仓库、push main 和发布 GitHub Pre-release；本次不发布 npm。
+以上清单保留供下载者复核同一合成示例。检查其他工作簿时，如有不符，请记录单元格地址和实际显示内容。本次发布的五项检查及用户放行均已记录；采用 GitHub Pre-release 分发，不发布 npm。

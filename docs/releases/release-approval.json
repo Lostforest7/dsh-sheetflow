@@ -1,0 +1,10 @@
+{
+  "date": "2026-10-01",
+  "userReply": "Excel 检查通过，同意发布",
+  "nativeExcelChecks": "all five passed",
+  "excelOperator": "Codex through Computer Use, explicitly delegated by the user; not a human manual sign-off",
+  "authorizedActions": ["create public GitHub repository dsh-sheetflow", "push main", "set topic dsh-plugin", "publish v0.1.0-pre as a GitHub Pre-release"],
+  "distributionDecision": "GitHub Pre-release with downloadable plugin archive; no npm publication for this preview",
+  "repositoryUrl": "https://github.com/Lostforest7/dsh-sheetflow",
+  "releaseUrl": "https://github.com/Lostforest7/dsh-sheetflow/releases/tag/v0.1.0-pre"
+}
