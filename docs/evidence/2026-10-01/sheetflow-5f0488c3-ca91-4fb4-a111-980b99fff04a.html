@@ -1,0 +1,64 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src data:"><meta name="viewport" content="width=device-width, initial-scale=1"><title>SheetFlow review</title>
+ <style>body{font:14px system-ui;max-width:1500px;margin:40px auto;padding:24px;color:#172434}h1{font-size:28px}table{border-collapse:collapse;width:100%}th,td{text-align:left;padding:12px;border-bottom:1px solid #ddd;vertical-align:top;overflow-wrap:anywhere}th{background:#e9f0f4}small{color:#536579}pre{white-space:pre-wrap;overflow-wrap:anywhere}.scroll{overflow-x:auto}</style>
+ <h1>Monthly settlement</h1><p>DSH SheetFlow · 2026-10-01T08:37:00.868Z · CNY</p>
+ <p>8 records / 记录 · 4 exceptions / 异常 · 4 acknowledged / 已核对</p>
+ <p>应收 / Expected: 2794.40 · 到账 / Actual: 2529.51 · 差额 / Difference: -264.89</p>
+ <p>合计仅含有效且无歧义金额。核对记录不表示异常已经解决。Totals include only valid, unambiguous amounts. Missing or invalid values stay unavailable. Acknowledgement records review; it does not resolve an exception.</p>
+ <p>Totals include only valid, unambiguous amounts; unresolved values are excluded.</p><p>Exports retain original formulas and request recalculation in Excel. Cached formula values are not evidence of recalculation.</p>
+ <div class="scroll"><table><thead><tr><th>编号 / Key</th><th>名称 / Label</th><th>应收 / Expected</th><th>到账 / Actual</th><th>差额 / Difference</th><th>状态 / Status</th><th>异常与核对 / Issues & review</th><th>来源 / Evidence</th></tr></thead><tbody><tr><td>RV-2609-001</td><td>青禾工坊</td><td>1280.35</td><td>1280.35</td><td>0.00</td><td>matched</td><td><br>—</td><td>contracts-sep.xlsx / 合同台账 / row 4 / D4, C4, B4<br>RV-2609-001 · 1280.35 · 青禾工坊<br>Exact key match; trim whitespace; case-sensitive; sum settlement rows by confirmed rule<hr>bank-sep.xlsx / 银行到账 / row 5 / C5, A5<br>RV-2609-001 · 1000.1<br>Exact key match; trim whitespace; case-sensitive; sum settlement rows by confirmed rule<hr>bank-sep.xlsx / 银行到账 / row 6 / C6, A6<br>RV-2609-001 · 280.25<br>Exact key match; trim whitespace; case-sensitive; sum settlement rows by confirmed rule</td></tr><tr><td>RV-2609-002</td><td>山海零售</td><td>980.50</td><td>975.50</td><td>-5.00</td><td>amount-difference</td><td>amount-difference<br>已核对 / Acknowledged</td><td>contracts-sep.xlsx / 合同台账 / row 5 / D5, C5, B5<br>RV-2609-002 · 980.5 · 山海零售<br>Exact key match; trim whitespace; case-sensitive<hr>bank-sep.xlsx / 银行到账 / row 7 / C7, A7<br>RV-2609-002 · 975.5<br>Exact key match; trim whitespace; case-sensitive</td></tr><tr><td>RV-2609-003</td><td>免费试用客户</td><td>0.00</td><td>0.00</td><td>0.00</td><td>matched</td><td><br>—</td><td>contracts-sep.xlsx / 合同台账 / row 6 / D6, C6, B6<br>RV-2609-003 · 0 · 免费试用客户<br>Exact key match; trim whitespace; case-sensitive<hr>bank-sep.xlsx / 银行到账 / row 8 / C8, A8<br>RV-2609-003 · 0<br>Exact key match; trim whitespace; case-sensitive</td></tr><tr><td>RV-2609-004</td><td>远帆设备</td><td>350.20</td><td>unavailable</td><td>unavailable</td><td>missing-settlement</td><td>missing-settlement<br>已核对 / Acknowledged</td><td>contracts-sep.xlsx / 合同台账 / row 7 / D7, C7, B7<br>RV-2609-004 · 350.2 · 远帆设备<br>Exact key match; trim whitespace; case-sensitive</td></tr><tr><td>RV-2609-005</td><td>退款客户</td><td>-25.75</td><td>-25.75</td><td>0.00</td><td>matched</td><td><br>—</td><td>contracts-sep.xlsx / 合同台账 / row 8 / D8, C8, B8<br>RV-2609-005 · -25.75 · 退款客户<br>Exact key match; trim whitespace; case-sensitive<hr>bank-sep.xlsx / 银行到账 / row 9 / C9, A9<br>RV-2609-005 · -25.75<br>Exact key match; trim whitespace; case-sensitive</td></tr><tr><td>RV-2609-006</td><td>一分差额客户</td><td>84.10</td><td>84.11</td><td>0.01</td><td>amount-difference</td><td>amount-difference<br>已核对 / Acknowledged</td><td>contracts-sep.xlsx / 合同台账 / row 9 / D9, C9, B9<br>RV-2609-006 · 84.1 · 一分差额客户<br>Exact key match; trim whitespace; case-sensitive<hr>bank-sep.xlsx / 银行到账 / row 10 / C10, A10<br>RV-2609-006 · 84.11<br>Exact key match; trim whitespace; case-sensitive</td></tr><tr><td>RV-2609-007</td><td>空格编号客户</td><td>125.00</td><td>125.00</td><td>0.00</td><td>matched</td><td><br>—</td><td>contracts-sep.xlsx / 合同台账 / row 10 / D10, C10, B10<br>RV-2609-007 · 125 · 空格编号客户<br>Exact key match; trim whitespace; case-sensitive<hr>bank-sep.xlsx / 银行到账 / row 11 / C11, A11<br> RV-2609-007  · 125<br>Exact key match; trim whitespace; case-sensitive</td></tr><tr><td>RV-2609-008</td><td></td><td>unavailable</td><td>90.30</td><td>unavailable</td><td>missing-order</td><td>missing-order<br>已核对 / Acknowledged</td><td>bank-sep.xlsx / 银行到账 / row 12 / C12, A12<br>RV-2609-008 · 90.3<br>Exact key match; trim whitespace; case-sensitive</td></tr></tbody></table></div>
+ <h2>完整写入差异 / All cell changes (43)</h2><table><thead><tr><th>Cell</th><th>Before</th><th>After</th><th>Record ID</th></tr></thead><tbody><tr><td>C9</td><td>OLD-01</td><td>RV-2609-001</td><td>e40860661f7ca87e85ef</td></tr><tr><td>B9</td><td>上期客户</td><td>青禾工坊</td><td>e40860661f7ca87e85ef</td></tr><tr><td>E9</td><td>9</td><td>1280.35</td><td>e40860661f7ca87e85ef</td></tr><tr><td>G9</td><td>9</td><td>1280.35</td><td>e40860661f7ca87e85ef</td></tr><tr><td>H9</td><td>0</td><td>0.00</td><td>e40860661f7ca87e85ef</td></tr><tr><td>C10</td><td>OLD-02</td><td>RV-2609-002</td><td>09cc88f76c73df9fc88b</td></tr><tr><td>B10</td><td>上期客户</td><td>山海零售</td><td>09cc88f76c73df9fc88b</td></tr><tr><td>E10</td><td>∅</td><td>980.50</td><td>09cc88f76c73df9fc88b</td></tr><tr><td>G10</td><td>∅</td><td>975.50</td><td>09cc88f76c73df9fc88b</td></tr><tr><td>H10</td><td>∅</td><td>-5.00</td><td>09cc88f76c73df9fc88b</td></tr><tr><td>I10</td><td>∅</td><td>amount-difference</td><td>09cc88f76c73df9fc88b</td></tr><tr><td>C11</td><td>∅</td><td>RV-2609-003</td><td>ff75379ccb33673e7230</td></tr><tr><td>B11</td><td>∅</td><td>免费试用客户</td><td>ff75379ccb33673e7230</td></tr><tr><td>E11</td><td>∅</td><td>0.00</td><td>ff75379ccb33673e7230</td></tr><tr><td>G11</td><td>∅</td><td>0.00</td><td>ff75379ccb33673e7230</td></tr><tr><td>H11</td><td>∅</td><td>0.00</td><td>ff75379ccb33673e7230</td></tr><tr><td>I11</td><td>∅</td><td>matched</td><td>ff75379ccb33673e7230</td></tr><tr><td>C12</td><td>∅</td><td>RV-2609-004</td><td>8400cad3196168f00508</td></tr><tr><td>B12</td><td>∅</td><td>远帆设备</td><td>8400cad3196168f00508</td></tr><tr><td>E12</td><td>∅</td><td>350.20</td><td>8400cad3196168f00508</td></tr><tr><td>I12</td><td>∅</td><td>missing-settlement</td><td>8400cad3196168f00508</td></tr><tr><td>C13</td><td>∅</td><td>RV-2609-005</td><td>8962944106f356993491</td></tr><tr><td>B13</td><td>∅</td><td>退款客户</td><td>8962944106f356993491</td></tr><tr><td>E13</td><td>∅</td><td>-25.75</td><td>8962944106f356993491</td></tr><tr><td>G13</td><td>∅</td><td>-25.75</td><td>8962944106f356993491</td></tr><tr><td>H13</td><td>∅</td><td>0.00</td><td>8962944106f356993491</td></tr><tr><td>I13</td><td>∅</td><td>matched</td><td>8962944106f356993491</td></tr><tr><td>C14</td><td>∅</td><td>RV-2609-006</td><td>7eb5ebaf3aa87ee5c245</td></tr><tr><td>B14</td><td>∅</td><td>一分差额客户</td><td>7eb5ebaf3aa87ee5c245</td></tr><tr><td>E14</td><td>∅</td><td>84.10</td><td>7eb5ebaf3aa87ee5c245</td></tr><tr><td>G14</td><td>∅</td><td>84.11</td><td>7eb5ebaf3aa87ee5c245</td></tr><tr><td>H14</td><td>∅</td><td>0.01</td><td>7eb5ebaf3aa87ee5c245</td></tr><tr><td>I14</td><td>∅</td><td>amount-difference</td><td>7eb5ebaf3aa87ee5c245</td></tr><tr><td>C15</td><td>∅</td><td>RV-2609-007</td><td>bb48b3b1a58067c8d3f3</td></tr><tr><td>B15</td><td>∅</td><td>空格编号客户</td><td>bb48b3b1a58067c8d3f3</td></tr><tr><td>E15</td><td>∅</td><td>125.00</td><td>bb48b3b1a58067c8d3f3</td></tr><tr><td>G15</td><td>∅</td><td>125.00</td><td>bb48b3b1a58067c8d3f3</td></tr><tr><td>H15</td><td>∅</td><td>0.00</td><td>bb48b3b1a58067c8d3f3</td></tr><tr><td>I15</td><td>∅</td><td>matched</td><td>bb48b3b1a58067c8d3f3</td></tr><tr><td>C16</td><td>∅</td><td>RV-2609-008</td><td>d65bf8d4038746275395</td></tr><tr><td>B16</td><td>∅</td><td></td><td>d65bf8d4038746275395</td></tr><tr><td>G16</td><td>∅</td><td>90.30</td><td>d65bf8d4038746275395</td></tr><tr><td>I16</td><td>∅</td><td>missing-order</td><td>d65bf8d4038746275395</td></tr></tbody></table>
+ <h2>输入指纹 / Input fingerprints</h2><pre>{
+  &quot;contracts-sep.xlsx&quot;: &quot;cb614ab1b80634346a752d342f4e0ac8d7339dae16a70c45b4705d8ec0f8f186&quot;,
+  &quot;bank-sep.xlsx&quot;: &quot;70e05eca71f60a962250087b93c0d059c8814c950d311dca2c446312cec9de59&quot;,
+  &quot;closeout-template.xlsx&quot;: &quot;cc04047c6e70928b6f28a5bf86821ff73286e6bd8c110111c074963615a199fc&quot;
+}</pre>
+ <h2>规则 / Recipe</h2><pre>{
+  &quot;schemaVersion&quot;: 1,
+  &quot;name&quot;: &quot;Monthly settlement&quot;,
+  &quot;currency&quot;: &quot;CNY&quot;,
+  &quot;orders&quot;: {
+    &quot;path&quot;: &quot;contracts-sep.xlsx&quot;,
+    &quot;sheet&quot;: &quot;合同台账&quot;,
+    &quot;headerRow&quot;: 3,
+    &quot;key&quot;: &quot;D&quot;,
+    &quot;amount&quot;: &quot;C&quot;,
+    &quot;label&quot;: &quot;B&quot;,
+    &quot;headers&quot;: {
+      &quot;key&quot;: &quot;合同编号&quot;,
+      &quot;amount&quot;: &quot;净额应收&quot;,
+      &quot;label&quot;: &quot;客户名称&quot;
+    }
+  },
+  &quot;settlements&quot;: {
+    &quot;path&quot;: &quot;bank-sep.xlsx&quot;,
+    &quot;sheet&quot;: &quot;银行到账&quot;,
+    &quot;headerRow&quot;: 4,
+    &quot;key&quot;: &quot;C&quot;,
+    &quot;amount&quot;: &quot;A&quot;,
+    &quot;headers&quot;: {
+      &quot;key&quot;: &quot;匹配合同&quot;,
+      &quot;amount&quot;: &quot;回款金额&quot;
+    }
+  },
+  &quot;match&quot;: {
+    &quot;trim&quot;: true,
+    &quot;caseSensitive&quot;: true,
+    &quot;settlementDuplicates&quot;: &quot;sum&quot;,
+    &quot;tolerance&quot;: &quot;0.00&quot;
+  },
+  &quot;template&quot;: {
+    &quot;path&quot;: &quot;closeout-template.xlsx&quot;,
+    &quot;sheet&quot;: &quot;9月核销&quot;,
+    &quot;startRow&quot;: 9,
+    &quot;endRow&quot;: 20,
+    &quot;columns&quot;: {
+      &quot;key&quot;: &quot;C&quot;,
+      &quot;label&quot;: &quot;B&quot;,
+      &quot;expected&quot;: &quot;E&quot;,
+      &quot;actual&quot;: &quot;G&quot;,
+      &quot;difference&quot;: &quot;H&quot;,
+      &quot;status&quot;: &quot;I&quot;
+    }
+  }
+}</pre>
+ <small>Independent community plugin. XLSX formulas are preserved and request recalculation when opened; SheetFlow does not calculate Excel formulas. 保留公式并请求 Excel 重算；插件自身不计算公式。</small></html>

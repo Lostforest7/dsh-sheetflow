@@ -1,0 +1,16 @@
+[
+  {
+    "file": "attempt-setup-failure.json",
+    "startedAt": "2026-10-01T08:31:04.621Z",
+    "error": "page.evaluate: Error: {\"ok\":false,\"error\":{\"code\":\"sheetflow/failed\",\"message\":\"EPERM: operation not permitted, mkdir 'C:\\\\Users\\\\xiaoz\\\\Documents\\\\deepseek-harness\\\\default-workspace\\\\.dsh-sheetflow'\",\"details\":{}}}\n    at eval (eval at evaluate (:311:30), <anonymous>:1:305)\n    at async <anonymous>:337:30",
+    "recordedModelUsage": "0 tokens for the first attempt; second stopped before any prompt",
+    "classification": "validation driver workspace/session setup failure"
+  },
+  {
+    "file": "attempt-session-setup.json",
+    "startedAt": "2026-10-01T08:32:40.106Z",
+    "error": "locator.click: Timeout 20000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByText('SheetFlow 新表盲测', { exact: true }).last()\u001b[22m\n",
+    "recordedModelUsage": "0 tokens for the first attempt; second stopped before any prompt",
+    "classification": "validation driver workspace/session setup failure"
+  }
+]

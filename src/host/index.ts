@@ -78,7 +78,7 @@ export function apply(ctx: Context): void {
     defineTool({
       name: 'sheetflow_inspect',
       description:
-        'Inspect a relative workspace XLSX/CSV file for SheetFlow mapping. Returns bounded headers and sample rows, without modifying the file.',
+        'Inspect a relative workspace XLSX/CSV file for SheetFlow mapping. Returns the requested headerRow and bounded sampleRows with absolute worksheet row numbers. Use those row numbers; never count nonempty rows to infer a header position. Inspect the exact source header row again before proposing a recipe. Does not modify the file.',
       parameters: { path: { type: 'string', required: true }, headerRow: { type: 'integer' } },
       output: {
         schema: { type: 'json' },

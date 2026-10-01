@@ -1,0 +1,14 @@
+{
+  "packageVersion": "0.1.0",
+  "sourceCommit": "5651250",
+  "originalPackageSha256": "c93a4f8e2016e989229353727e914b08309624da13197125dde13010f68b211f",
+  "installedProfile": "isolated profile with installed tgz, not a source junction",
+  "realApiTest": "before the absolute sample row metadata/prompt improvement",
+  "postImprovementChecks": {
+    "unit": 26,
+    "browser": 3,
+    "typecheck": true,
+    "build": true,
+    "paidModelRerun": false
+  }
+}

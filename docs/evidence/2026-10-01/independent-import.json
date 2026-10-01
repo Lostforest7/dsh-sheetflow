@@ -1,0 +1,13 @@
+{
+  "engine": "artifact-tool (not Microsoft Excel)",
+  "totals": {
+    "expected": "2794.40",
+    "actual": "2529.51",
+    "difference": "-264.89"
+  },
+  "formulaErrors": "{\"kind\":\"notice\",\"message\":\"Cell search matched 0 entries.\"}",
+  "zeroAmount": 0,
+  "refundAmount": -25.75,
+  "centDifference": 0.01,
+  "missingSettlementBlank": true
+}

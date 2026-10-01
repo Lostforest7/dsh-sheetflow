@@ -2,11 +2,15 @@
 
 **把明细填进固定 Excel 模板，逐项核对异常，每个结果都能追溯来源。**
 
-**0.1.0 本地预览版：**已在 Windows、Node 24.19.0、DSH Web 0.2.0-rc.2 上验证，提供中英文工作台，使用三组虚构 XLSX 样例。DSH 工具调用使用本地模拟模型完成接入测试；**真实 DeepSeek 的映射质量和真实业务表格尚未验证**。目前未发布 GitHub 或 npm。
+> **财务免责声明：**SheetFlow 用于数据整理与对账复核，不提供会计、税务或财务建议，也不是记账系统。AI 映射及导出的金额、公式和异常，投入业务使用前均需独立核验。勾选“已核对”仅记录复核，不代表异常已解决或款项已获批准。
+
+**0.1.0 本地预览版：**已在 Windows、Node 24.19.0、DSH Web 0.2.0-rc.2 上验证，提供中英文工作台。三组样例及一组新建盲测均为合成数据。真实 `deepseek-v4-pro` / `max` 识别对了列映射，但需要**修正两处来源表头行号**才能导出；这仅证明一次经复核的闭环，未证明全自动映射或真实业务兼容性。[本轮完整记录](docs/real-model-validation.md)。目前未发布 GitHub 或 npm。
 
 [English](README.md) · [兼容性与限制](docs/compatibility.md) · [验证记录](docs/validation.md) · [规则格式](docs/recipes.md)
 
-![月结数据、异常复核与来源追溯](docs/assets/review-workbench.png)
+![合成示例数据：月结数据、异常复核与来源追溯](docs/assets/review-workbench.png)
+
+*演示截图：合成示例数据。*
 
 这是 [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness) 的独立社区插件。输入订单明细、结算明细和业务模板，确认列映射，预览写入差异，核对异常，最后得到新的模板副本、HTML 审阅报告和 JSON 来源记录。
 
@@ -72,4 +76,4 @@ npm run dev
 
 开发检查：`npm run check`、`npm run test:e2e`。浏览器测试优先使用 Windows 已安装的 Google Chrome，否则执行 `npx playwright install chromium`。DSH 预发布依赖图采用 `.npmrc` 的兼容解析方式；DSH 运行程序请单独按官方说明安装。
 
-MIT 许可。发布前还需要完成真实模型与真实业务样表验证。
+MIT 许可。真实模型复核记录已提供；真实业务样表和复杂工作簿仍需验证，发布等待终审。

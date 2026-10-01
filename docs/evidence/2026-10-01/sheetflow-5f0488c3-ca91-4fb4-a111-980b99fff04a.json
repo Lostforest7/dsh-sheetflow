@@ -1,0 +1,2036 @@
+{
+  "id": "5f0488c3-ca91-4fb4-a111-980b99fff04a",
+  "createdAt": "2026-10-01T08:37:00.868Z",
+  "recipe": {
+    "schemaVersion": 1,
+    "name": "Monthly settlement",
+    "currency": "CNY",
+    "orders": {
+      "path": "contracts-sep.xlsx",
+      "sheet": "合同台账",
+      "headerRow": 3,
+      "key": "D",
+      "amount": "C",
+      "label": "B",
+      "headers": {
+        "key": "合同编号",
+        "amount": "净额应收",
+        "label": "客户名称"
+      }
+    },
+    "settlements": {
+      "path": "bank-sep.xlsx",
+      "sheet": "银行到账",
+      "headerRow": 4,
+      "key": "C",
+      "amount": "A",
+      "headers": {
+        "key": "匹配合同",
+        "amount": "回款金额"
+      }
+    },
+    "match": {
+      "trim": true,
+      "caseSensitive": true,
+      "settlementDuplicates": "sum",
+      "tolerance": "0.00"
+    },
+    "template": {
+      "path": "closeout-template.xlsx",
+      "sheet": "9月核销",
+      "startRow": 9,
+      "endRow": 20,
+      "columns": {
+        "key": "C",
+        "label": "B",
+        "expected": "E",
+        "actual": "G",
+        "difference": "H",
+        "status": "I"
+      }
+    }
+  },
+  "inputHashes": {
+    "contracts-sep.xlsx": "cb614ab1b80634346a752d342f4e0ac8d7339dae16a70c45b4705d8ec0f8f186",
+    "bank-sep.xlsx": "70e05eca71f60a962250087b93c0d059c8814c950d311dca2c446312cec9de59",
+    "closeout-template.xlsx": "cc04047c6e70928b6f28a5bf86821ff73286e6bd8c110111c074963615a199fc"
+  },
+  "rows": [
+    {
+      "id": "e40860661f7ca87e85ef",
+      "key": "RV-2609-001",
+      "label": "青禾工坊",
+      "expected": "1280.35",
+      "actual": "1280.35",
+      "difference": "0.00",
+      "status": "matched",
+      "issues": [],
+      "evidence": [
+        {
+          "file": "contracts-sep.xlsx",
+          "sheet": "合同台账",
+          "row": 4,
+          "cells": [
+            "D4",
+            "C4",
+            "B4"
+          ],
+          "values": [
+            "RV-2609-001",
+            "1280.35",
+            "青禾工坊"
+          ],
+          "rule": "Exact key match; trim whitespace; case-sensitive; sum settlement rows by confirmed rule"
+        },
+        {
+          "file": "bank-sep.xlsx",
+          "sheet": "银行到账",
+          "row": 5,
+          "cells": [
+            "C5",
+            "A5"
+          ],
+          "values": [
+            "RV-2609-001",
+            "1000.1"
+          ],
+          "rule": "Exact key match; trim whitespace; case-sensitive; sum settlement rows by confirmed rule"
+        },
+        {
+          "file": "bank-sep.xlsx",
+          "sheet": "银行到账",
+          "row": 6,
+          "cells": [
+            "C6",
+            "A6"
+          ],
+          "values": [
+            "RV-2609-001",
+            "280.25"
+          ],
+          "rule": "Exact key match; trim whitespace; case-sensitive; sum settlement rows by confirmed rule"
+        }
+      ]
+    },
+    {
+      "id": "09cc88f76c73df9fc88b",
+      "key": "RV-2609-002",
+      "label": "山海零售",
+      "expected": "980.50",
+      "actual": "975.50",
+      "difference": "-5.00",
+      "status": "amount-difference",
+      "issues": [
+        "amount-difference"
+      ],
+      "evidence": [
+        {
+          "file": "contracts-sep.xlsx",
+          "sheet": "合同台账",
+          "row": 5,
+          "cells": [
+            "D5",
+            "C5",
+            "B5"
+          ],
+          "values": [
+            "RV-2609-002",
+            "980.5",
+            "山海零售"
+          ],
+          "rule": "Exact key match; trim whitespace; case-sensitive"
+        },
+        {
+          "file": "bank-sep.xlsx",
+          "sheet": "银行到账",
+          "row": 7,
+          "cells": [
+            "C7",
+            "A7"
+          ],
+          "values": [
+            "RV-2609-002",
+            "975.5"
+          ],
+          "rule": "Exact key match; trim whitespace; case-sensitive"
+        }
+      ]
+    },
+    {
+      "id": "ff75379ccb33673e7230",
+      "key": "RV-2609-003",
+      "label": "免费试用客户",
+      "expected": "0.00",
+      "actual": "0.00",
+      "difference": "0.00",
+      "status": "matched",
+      "issues": [],
+      "evidence": [
+        {
+          "file": "contracts-sep.xlsx",
+          "sheet": "合同台账",
+          "row": 6,
+          "cells": [
+            "D6",
+            "C6",
+            "B6"
+          ],
+          "values": [
+            "RV-2609-003",
+            "0",
+            "免费试用客户"
+          ],
+          "rule": "Exact key match; trim whitespace; case-sensitive"
+        },
+        {
+          "file": "bank-sep.xlsx",
+          "sheet": "银行到账",
+          "row": 8,
+          "cells": [
+            "C8",
+            "A8"
+          ],
+          "values": [
+            "RV-2609-003",
+            "0"
+          ],
+          "rule": "Exact key match; trim whitespace; case-sensitive"
+        }
+      ]
+    },
+    {
+      "id": "8400cad3196168f00508",
+      "key": "RV-2609-004",
+      "label": "远帆设备",
+      "expected": "350.20",
+      "actual": null,
+      "difference": null,
+      "status": "missing-settlement",
+      "issues": [
+        "missing-settlement"
+      ],
+      "evidence": [
+        {
+          "file": "contracts-sep.xlsx",
+          "sheet": "合同台账",
+          "row": 7,
+          "cells": [
+            "D7",
+            "C7",
+            "B7"
+          ],
+          "values": [
+            "RV-2609-004",
+            "350.2",
+            "远帆设备"
+          ],
+          "rule": "Exact key match; trim whitespace; case-sensitive"
+        }
+      ]
+    },
+    {
+      "id": "8962944106f356993491",
+      "key": "RV-2609-005",
+      "label": "退款客户",
+      "expected": "-25.75",
+      "actual": "-25.75",
+      "difference": "0.00",
+      "status": "matched",
+      "issues": [],
+      "evidence": [
+        {
+          "file": "contracts-sep.xlsx",
+          "sheet": "合同台账",
+          "row": 8,
+          "cells": [
+            "D8",
+            "C8",
+            "B8"
+          ],
+          "values": [
+            "RV-2609-005",
+            "-25.75",
+            "退款客户"
+          ],
+          "rule": "Exact key match; trim whitespace; case-sensitive"
+        },
+        {
+          "file": "bank-sep.xlsx",
+          "sheet": "银行到账",
+          "row": 9,
+          "cells": [
+            "C9",
+            "A9"
+          ],
+          "values": [
+            "RV-2609-005",
+            "-25.75"
+          ],
+          "rule": "Exact key match; trim whitespace; case-sensitive"
+        }
+      ]
+    },
+    {
+      "id": "7eb5ebaf3aa87ee5c245",
+      "key": "RV-2609-006",
+      "label": "一分差额客户",
+      "expected": "84.10",
+      "actual": "84.11",
+      "difference": "0.01",
+      "status": "amount-difference",
+      "issues": [
+        "amount-difference"
+      ],
+      "evidence": [
+        {
+          "file": "contracts-sep.xlsx",
+          "sheet": "合同台账",
+          "row": 9,
+          "cells": [
+            "D9",
+            "C9",
+            "B9"
+          ],
+          "values": [
+            "RV-2609-006",
+            "84.1",
+            "一分差额客户"
+          ],
+          "rule": "Exact key match; trim whitespace; case-sensitive"
+        },
+        {
+          "file": "bank-sep.xlsx",
+          "sheet": "银行到账",
+          "row": 10,
+          "cells": [
+            "C10",
+            "A10"
+          ],
+          "values": [
+            "RV-2609-006",
+            "84.11"
+          ],
+          "rule": "Exact key match; trim whitespace; case-sensitive"
+        }
+      ]
+    },
+    {
+      "id": "bb48b3b1a58067c8d3f3",
+      "key": "RV-2609-007",
+      "label": "空格编号客户",
+      "expected": "125.00",
+      "actual": "125.00",
+      "difference": "0.00",
+      "status": "matched",
+      "issues": [],
+      "evidence": [
+        {
+          "file": "contracts-sep.xlsx",
+          "sheet": "合同台账",
+          "row": 10,
+          "cells": [
+            "D10",
+            "C10",
+            "B10"
+          ],
+          "values": [
+            "RV-2609-007",
+            "125",
+            "空格编号客户"
+          ],
+          "rule": "Exact key match; trim whitespace; case-sensitive"
+        },
+        {
+          "file": "bank-sep.xlsx",
+          "sheet": "银行到账",
+          "row": 11,
+          "cells": [
+            "C11",
+            "A11"
+          ],
+          "values": [
+            " RV-2609-007 ",
+            "125"
+          ],
+          "rule": "Exact key match; trim whitespace; case-sensitive"
+        }
+      ]
+    },
+    {
+      "id": "d65bf8d4038746275395",
+      "key": "RV-2609-008",
+      "label": "",
+      "expected": null,
+      "actual": "90.30",
+      "difference": null,
+      "status": "missing-order",
+      "issues": [
+        "missing-order"
+      ],
+      "evidence": [
+        {
+          "file": "bank-sep.xlsx",
+          "sheet": "银行到账",
+          "row": 12,
+          "cells": [
+            "C12",
+            "A12"
+          ],
+          "values": [
+            "RV-2609-008",
+            "90.3"
+          ],
+          "rule": "Exact key match; trim whitespace; case-sensitive"
+        }
+      ]
+    }
+  ],
+  "changes": [
+    {
+      "ref": "C9",
+      "before": "OLD-01",
+      "after": "RV-2609-001",
+      "kind": "text",
+      "rowId": "e40860661f7ca87e85ef",
+      "evidence": [
+        {
+          "file": "contracts-sep.xlsx",
+          "sheet": "合同台账",
+          "row": 4,
+          "cells": [
+            "D4",
+            "C4",
+            "B4"
+          ],
+          "values": [
+            "RV-2609-001",
+            "1280.35",
+            "青禾工坊"
+          ],
+          "rule": "Exact key match; trim whitespace; case-sensitive; sum settlement rows by confirmed rule"
+        },
+        {
+          "file": "bank-sep.xlsx",
+          "sheet": "银行到账",
+          "row": 5,
+          "cells": [
+            "C5",
+            "A5"
+          ],
+          "values": [
+            "RV-2609-001",
+            "1000.1"
+          ],
+          "rule": "Exact key match; trim whitespace; case-sensitive; sum settlement rows by confirmed rule"
+        },
+        {
+          "file": "bank-sep.xlsx",
+          "sheet": "银行到账",
+          "row": 6,
+          "cells": [
+            "C6",
+            "A6"
+          ],
+          "values": [
+            "RV-2609-001",
+            "280.25"
+          ],
+          "rule": "Exact key match; trim whitespace; case-sensitive; sum settlement rows by confirmed rule"
+        }
+      ]
+    },
+    {
+      "ref": "B9",
+      "before": "上期客户",
+      "after": "青禾工坊",
+      "kind": "text",
+      "rowId": "e40860661f7ca87e85ef",
+      "evidence": [
+        {
+          "file": "contracts-sep.xlsx",
+          "sheet": "合同台账",
+          "row": 4,
+          "cells": [
+            "D4",
+            "C4",
+            "B4"
+          ],
+          "values": [
+            "RV-2609-001",
+            "1280.35",
+            "青禾工坊"
+          ],
+          "rule": "Exact key match; trim whitespace; case-sensitive; sum settlement rows by confirmed rule"
+        },
+        {
+          "file": "bank-sep.xlsx",
+          "sheet": "银行到账",
+          "row": 5,
+          "cells": [
+            "C5",
+            "A5"
+          ],
+          "values": [
+            "RV-2609-001",
+            "1000.1"
+          ],
+          "rule": "Exact key match; trim whitespace; case-sensitive; sum settlement rows by confirmed rule"
+        },
+        {
+          "file": "bank-sep.xlsx",
+          "sheet": "银行到账",
+          "row": 6,
+          "cells": [
+            "C6",
+            "A6"
+          ],
+          "values": [
+            "RV-2609-001",
+            "280.25"
+          ],
+          "rule": "Exact key match; trim whitespace; case-sensitive; sum settlement rows by confirmed rule"
+        }
+      ]
+    },
+    {
+      "ref": "E9",
+      "before": "9",
+      "after": "1280.35",
+      "kind": "number",
+      "rowId": "e40860661f7ca87e85ef",
+      "evidence": [
+        {
+          "file": "contracts-sep.xlsx",
+          "sheet": "合同台账",
+          "row": 4,
+          "cells": [
+            "D4",
+            "C4",
+            "B4"
+          ],
+          "values": [
+            "RV-2609-001",
+            "1280.35",
+            "青禾工坊"
+          ],
+          "rule": "Exact key match; trim whitespace; case-sensitive; sum settlement rows by confirmed rule"
+        },
+        {
+          "file": "bank-sep.xlsx",
+          "sheet": "银行到账",
+          "row": 5,
+          "cells": [
+            "C5",
+            "A5"
+          ],
+          "values": [
+            "RV-2609-001",
+            "1000.1"
+          ],
+          "rule": "Exact key match; trim whitespace; case-sensitive; sum settlement rows by confirmed rule"
+        },
+        {
+          "file": "bank-sep.xlsx",
+          "sheet": "银行到账",
+          "row": 6,
+          "cells": [
+            "C6",
+            "A6"
+          ],
+          "values": [
+            "RV-2609-001",
+            "280.25"
+          ],
+          "rule": "Exact key match; trim whitespace; case-sensitive; sum settlement rows by confirmed rule"
+        }
+      ]
+    },
+    {
+      "ref": "G9",
+      "before": "9",
+      "after": "1280.35",
+      "kind": "number",
+      "rowId": "e40860661f7ca87e85ef",
+      "evidence": [
+        {
+          "file": "contracts-sep.xlsx",
+          "sheet": "合同台账",
+          "row": 4,
+          "cells": [
+            "D4",
+            "C4",
+            "B4"
+          ],
+          "values": [
+            "RV-2609-001",
+            "1280.35",
+            "青禾工坊"
+          ],
+          "rule": "Exact key match; trim whitespace; case-sensitive; sum settlement rows by confirmed rule"
+        },
+        {
+          "file": "bank-sep.xlsx",
+          "sheet": "银行到账",
+          "row": 5,
+          "cells": [
+            "C5",
+            "A5"
+          ],
+          "values": [
+            "RV-2609-001",
+            "1000.1"
+          ],
+          "rule": "Exact key match; trim whitespace; case-sensitive; sum settlement rows by confirmed rule"
+        },
+        {
+          "file": "bank-sep.xlsx",
+          "sheet": "银行到账",
+          "row": 6,
+          "cells": [
+            "C6",
+            "A6"
+          ],
+          "values": [
+            "RV-2609-001",
+            "280.25"
+          ],
+          "rule": "Exact key match; trim whitespace; case-sensitive; sum settlement rows by confirmed rule"
+        }
+      ]
+    },
+    {
+      "ref": "H9",
+      "before": "0",
+      "after": "0.00",
+      "kind": "number",
+      "rowId": "e40860661f7ca87e85ef",
+      "evidence": [
+        {
+          "file": "contracts-sep.xlsx",
+          "sheet": "合同台账",
+          "row": 4,
+          "cells": [
+            "D4",
+            "C4",
+            "B4"
+          ],
+          "values": [
+            "RV-2609-001",
+            "1280.35",
+            "青禾工坊"
+          ],
+          "rule": "Exact key match; trim whitespace; case-sensitive; sum settlement rows by confirmed rule"
+        },
+        {
+          "file": "bank-sep.xlsx",
+          "sheet": "银行到账",
+          "row": 5,
+          "cells": [
+            "C5",
+            "A5"
+          ],
+          "values": [
+            "RV-2609-001",
+            "1000.1"
+          ],
+          "rule": "Exact key match; trim whitespace; case-sensitive; sum settlement rows by confirmed rule"
+        },
+        {
+          "file": "bank-sep.xlsx",
+          "sheet": "银行到账",
+          "row": 6,
+          "cells": [
+            "C6",
+            "A6"
+          ],
+          "values": [
+            "RV-2609-001",
+            "280.25"
+          ],
+          "rule": "Exact key match; trim whitespace; case-sensitive; sum settlement rows by confirmed rule"
+        }
+      ]
+    },
+    {
+      "ref": "C10",
+      "before": "OLD-02",
+      "after": "RV-2609-002",
+      "kind": "text",
+      "rowId": "09cc88f76c73df9fc88b",
+      "evidence": [
+        {
+          "file": "contracts-sep.xlsx",
+          "sheet": "合同台账",
+          "row": 5,
+          "cells": [
+            "D5",
+            "C5",
+            "B5"
+          ],
+          "values": [
+            "RV-2609-002",
+            "980.5",
+            "山海零售"
+          ],
+          "rule": "Exact key match; trim whitespace; case-sensitive"
+        },
+        {
+          "file": "bank-sep.xlsx",
+          "sheet": "银行到账",
+          "row": 7,
+          "cells": [
+            "C7",
+            "A7"
+          ],
+          "values": [
+            "RV-2609-002",
+            "975.5"
+          ],
+          "rule": "Exact key match; trim whitespace; case-sensitive"
+        }
+      ]
+    },
+    {
+      "ref": "B10",
+      "before": "上期客户",
+      "after": "山海零售",
+      "kind": "text",
+      "rowId": "09cc88f76c73df9fc88b",
+      "evidence": [
+        {
+          "file": "contracts-sep.xlsx",
+          "sheet": "合同台账",
+          "row": 5,
+          "cells": [
+            "D5",
+            "C5",
+            "B5"
+          ],
+          "values": [
+            "RV-2609-002",
+            "980.5",
+            "山海零售"
+          ],
+          "rule": "Exact key match; trim whitespace; case-sensitive"
+        },
+        {
+          "file": "bank-sep.xlsx",
+          "sheet": "银行到账",
+          "row": 7,
+          "cells": [
+            "C7",
+            "A7"
+          ],
+          "values": [
+            "RV-2609-002",
+            "975.5"
+          ],
+          "rule": "Exact key match; trim whitespace; case-sensitive"
+        }
+      ]
+    },
+    {
+      "ref": "E10",
+      "before": null,
+      "after": "980.50",
+      "kind": "number",
+      "rowId": "09cc88f76c73df9fc88b",
+      "evidence": [
+        {
+          "file": "contracts-sep.xlsx",
+          "sheet": "合同台账",
+          "row": 5,
+          "cells": [
+            "D5",
+            "C5",
+            "B5"
+          ],
+          "values": [
+            "RV-2609-002",
+            "980.5",
+            "山海零售"
+          ],
+          "rule": "Exact key match; trim whitespace; case-sensitive"
+        },
+        {
+          "file": "bank-sep.xlsx",
+          "sheet": "银行到账",
+          "row": 7,
+          "cells": [
+            "C7",
+            "A7"
+          ],
+          "values": [
+            "RV-2609-002",
+            "975.5"
+          ],
+          "rule": "Exact key match; trim whitespace; case-sensitive"
+        }
+      ]
+    },
+    {
+      "ref": "G10",
+      "before": null,
+      "after": "975.50",
+      "kind": "number",
+      "rowId": "09cc88f76c73df9fc88b",
+      "evidence": [
+        {
+          "file": "contracts-sep.xlsx",
+          "sheet": "合同台账",
+          "row": 5,
+          "cells": [
+            "D5",
+            "C5",
+            "B5"
+          ],
+          "values": [
+            "RV-2609-002",
+            "980.5",
+            "山海零售"
+          ],
+          "rule": "Exact key match; trim whitespace; case-sensitive"
+        },
+        {
+          "file": "bank-sep.xlsx",
+          "sheet": "银行到账",
+          "row": 7,
+          "cells": [
+            "C7",
+            "A7"
+          ],
+          "values": [
+            "RV-2609-002",
+            "975.5"
+          ],
+          "rule": "Exact key match; trim whitespace; case-sensitive"
+        }
+      ]
+    },
+    {
+      "ref": "H10",
+      "before": null,
+      "after": "-5.00",
+      "kind": "number",
+      "rowId": "09cc88f76c73df9fc88b",
+      "evidence": [
+        {
+          "file": "contracts-sep.xlsx",
+          "sheet": "合同台账",
+          "row": 5,
+          "cells": [
+            "D5",
+            "C5",
+            "B5"
+          ],
+          "values": [
+            "RV-2609-002",
+            "980.5",
+            "山海零售"
+          ],
+          "rule": "Exact key match; trim whitespace; case-sensitive"
+        },
+        {
+          "file": "bank-sep.xlsx",
+          "sheet": "银行到账",
+          "row": 7,
+          "cells": [
+            "C7",
+            "A7"
+          ],
+          "values": [
+            "RV-2609-002",
+            "975.5"
+          ],
+          "rule": "Exact key match; trim whitespace; case-sensitive"
+        }
+      ]
+    },
+    {
+      "ref": "I10",
+      "before": null,
+      "after": "amount-difference",
+      "kind": "text",
+      "rowId": "09cc88f76c73df9fc88b",
+      "evidence": [
+        {
+          "file": "contracts-sep.xlsx",
+          "sheet": "合同台账",
+          "row": 5,
+          "cells": [
+            "D5",
+            "C5",
+            "B5"
+          ],
+          "values": [
+            "RV-2609-002",
+            "980.5",
+            "山海零售"
+          ],
+          "rule": "Exact key match; trim whitespace; case-sensitive"
+        },
+        {
+          "file": "bank-sep.xlsx",
+          "sheet": "银行到账",
+          "row": 7,
+          "cells": [
+            "C7",
+            "A7"
+          ],
+          "values": [
+            "RV-2609-002",
+            "975.5"
+          ],
+          "rule": "Exact key match; trim whitespace; case-sensitive"
+        }
+      ]
+    },
+    {
+      "ref": "C11",
+      "before": null,
+      "after": "RV-2609-003",
+      "kind": "text",
+      "rowId": "ff75379ccb33673e7230",
+      "evidence": [
+        {
+          "file": "contracts-sep.xlsx",
+          "sheet": "合同台账",
+          "row": 6,
+          "cells": [
+            "D6",
+            "C6",
+            "B6"
+          ],
+          "values": [
+            "RV-2609-003",
+            "0",
+            "免费试用客户"
+          ],
+          "rule": "Exact key match; trim whitespace; case-sensitive"
+        },
+        {
+          "file": "bank-sep.xlsx",
+          "sheet": "银行到账",
+          "row": 8,
+          "cells": [
+            "C8",
+            "A8"
+          ],
+          "values": [
+            "RV-2609-003",
+            "0"
+          ],
+          "rule": "Exact key match; trim whitespace; case-sensitive"
+        }
+      ]
+    },
+    {
+      "ref": "B11",
+      "before": null,
+      "after": "免费试用客户",
+      "kind": "text",
+      "rowId": "ff75379ccb33673e7230",
+      "evidence": [
+        {
+          "file": "contracts-sep.xlsx",
+          "sheet": "合同台账",
+          "row": 6,
+          "cells": [
+            "D6",
+            "C6",
+            "B6"
+          ],
+          "values": [
+            "RV-2609-003",
+            "0",
+            "免费试用客户"
+          ],
+          "rule": "Exact key match; trim whitespace; case-sensitive"
+        },
+        {
+          "file": "bank-sep.xlsx",
+          "sheet": "银行到账",
+          "row": 8,
+          "cells": [
+            "C8",
+            "A8"
+          ],
+          "values": [
+            "RV-2609-003",
+            "0"
+          ],
+          "rule": "Exact key match; trim whitespace; case-sensitive"
+        }
+      ]
+    },
+    {
+      "ref": "E11",
+      "before": null,
+      "after": "0.00",
+      "kind": "number",
+      "rowId": "ff75379ccb33673e7230",
+      "evidence": [
+        {
+          "file": "contracts-sep.xlsx",
+          "sheet": "合同台账",
+          "row": 6,
+          "cells": [
+            "D6",
+            "C6",
+            "B6"
+          ],
+          "values": [
+            "RV-2609-003",
+            "0",
+            "免费试用客户"
+          ],
+          "rule": "Exact key match; trim whitespace; case-sensitive"
+        },
+        {
+          "file": "bank-sep.xlsx",
+          "sheet": "银行到账",
+          "row": 8,
+          "cells": [
+            "C8",
+            "A8"
+          ],
+          "values": [
+            "RV-2609-003",
+            "0"
+          ],
+          "rule": "Exact key match; trim whitespace; case-sensitive"
+        }
+      ]
+    },
+    {
+      "ref": "G11",
+      "before": null,
+      "after": "0.00",
+      "kind": "number",
+      "rowId": "ff75379ccb33673e7230",
+      "evidence": [
+        {
+          "file": "contracts-sep.xlsx",
+          "sheet": "合同台账",
+          "row": 6,
+          "cells": [
+            "D6",
+            "C6",
+            "B6"
+          ],
+          "values": [
+            "RV-2609-003",
+            "0",
+            "免费试用客户"
+          ],
+          "rule": "Exact key match; trim whitespace; case-sensitive"
+        },
+        {
+          "file": "bank-sep.xlsx",
+          "sheet": "银行到账",
+          "row": 8,
+          "cells": [
+            "C8",
+            "A8"
+          ],
+          "values": [
+            "RV-2609-003",
+            "0"
+          ],
+          "rule": "Exact key match; trim whitespace; case-sensitive"
+        }
+      ]
+    },
+    {
+      "ref": "H11",
+      "before": null,
+      "after": "0.00",
+      "kind": "number",
+      "rowId": "ff75379ccb33673e7230",
+      "evidence": [
+        {
+          "file": "contracts-sep.xlsx",
+          "sheet": "合同台账",
+          "row": 6,
+          "cells": [
+            "D6",
+            "C6",
+            "B6"
+          ],
+          "values": [
+            "RV-2609-003",
+            "0",
+            "免费试用客户"
+          ],
+          "rule": "Exact key match; trim whitespace; case-sensitive"
+        },
+        {
+          "file": "bank-sep.xlsx",
+          "sheet": "银行到账",
+          "row": 8,
+          "cells": [
+            "C8",
+            "A8"
+          ],
+          "values": [
+            "RV-2609-003",
+            "0"
+          ],
+          "rule": "Exact key match; trim whitespace; case-sensitive"
+        }
+      ]
+    },
+    {
+      "ref": "I11",
+      "before": null,
+      "after": "matched",
+      "kind": "text",
+      "rowId": "ff75379ccb33673e7230",
+      "evidence": [
+        {
+          "file": "contracts-sep.xlsx",
+          "sheet": "合同台账",
+          "row": 6,
+          "cells": [
+            "D6",
+            "C6",
+            "B6"
+          ],
+          "values": [
+            "RV-2609-003",
+            "0",
+            "免费试用客户"
+          ],
+          "rule": "Exact key match; trim whitespace; case-sensitive"
+        },
+        {
+          "file": "bank-sep.xlsx",
+          "sheet": "银行到账",
+          "row": 8,
+          "cells": [
+            "C8",
+            "A8"
+          ],
+          "values": [
+            "RV-2609-003",
+            "0"
+          ],
+          "rule": "Exact key match; trim whitespace; case-sensitive"
+        }
+      ]
+    },
+    {
+      "ref": "C12",
+      "before": null,
+      "after": "RV-2609-004",
+      "kind": "text",
+      "rowId": "8400cad3196168f00508",
+      "evidence": [
+        {
+          "file": "contracts-sep.xlsx",
+          "sheet": "合同台账",
+          "row": 7,
+          "cells": [
+            "D7",
+            "C7",
+            "B7"
+          ],
+          "values": [
+            "RV-2609-004",
+            "350.2",
+            "远帆设备"
+          ],
+          "rule": "Exact key match; trim whitespace; case-sensitive"
+        }
+      ]
+    },
+    {
+      "ref": "B12",
+      "before": null,
+      "after": "远帆设备",
+      "kind": "text",
+      "rowId": "8400cad3196168f00508",
+      "evidence": [
+        {
+          "file": "contracts-sep.xlsx",
+          "sheet": "合同台账",
+          "row": 7,
+          "cells": [
+            "D7",
+            "C7",
+            "B7"
+          ],
+          "values": [
+            "RV-2609-004",
+            "350.2",
+            "远帆设备"
+          ],
+          "rule": "Exact key match; trim whitespace; case-sensitive"
+        }
+      ]
+    },
+    {
+      "ref": "E12",
+      "before": null,
+      "after": "350.20",
+      "kind": "number",
+      "rowId": "8400cad3196168f00508",
+      "evidence": [
+        {
+          "file": "contracts-sep.xlsx",
+          "sheet": "合同台账",
+          "row": 7,
+          "cells": [
+            "D7",
+            "C7",
+            "B7"
+          ],
+          "values": [
+            "RV-2609-004",
+            "350.2",
+            "远帆设备"
+          ],
+          "rule": "Exact key match; trim whitespace; case-sensitive"
+        }
+      ]
+    },
+    {
+      "ref": "I12",
+      "before": null,
+      "after": "missing-settlement",
+      "kind": "text",
+      "rowId": "8400cad3196168f00508",
+      "evidence": [
+        {
+          "file": "contracts-sep.xlsx",
+          "sheet": "合同台账",
+          "row": 7,
+          "cells": [
+            "D7",
+            "C7",
+            "B7"
+          ],
+          "values": [
+            "RV-2609-004",
+            "350.2",
+            "远帆设备"
+          ],
+          "rule": "Exact key match; trim whitespace; case-sensitive"
+        }
+      ]
+    },
+    {
+      "ref": "C13",
+      "before": null,
+      "after": "RV-2609-005",
+      "kind": "text",
+      "rowId": "8962944106f356993491",
+      "evidence": [
+        {
+          "file": "contracts-sep.xlsx",
+          "sheet": "合同台账",
+          "row": 8,
+          "cells": [
+            "D8",
+            "C8",
+            "B8"
+          ],
+          "values": [
+            "RV-2609-005",
+            "-25.75",
+            "退款客户"
+          ],
+          "rule": "Exact key match; trim whitespace; case-sensitive"
+        },
+        {
+          "file": "bank-sep.xlsx",
+          "sheet": "银行到账",
+          "row": 9,
+          "cells": [
+            "C9",
+            "A9"
+          ],
+          "values": [
+            "RV-2609-005",
+            "-25.75"
+          ],
+          "rule": "Exact key match; trim whitespace; case-sensitive"
+        }
+      ]
+    },
+    {
+      "ref": "B13",
+      "before": null,
+      "after": "退款客户",
+      "kind": "text",
+      "rowId": "8962944106f356993491",
+      "evidence": [
+        {
+          "file": "contracts-sep.xlsx",
+          "sheet": "合同台账",
+          "row": 8,
+          "cells": [
+            "D8",
+            "C8",
+            "B8"
+          ],
+          "values": [
+            "RV-2609-005",
+            "-25.75",
+            "退款客户"
+          ],
+          "rule": "Exact key match; trim whitespace; case-sensitive"
+        },
+        {
+          "file": "bank-sep.xlsx",
+          "sheet": "银行到账",
+          "row": 9,
+          "cells": [
+            "C9",
+            "A9"
+          ],
+          "values": [
+            "RV-2609-005",
+            "-25.75"
+          ],
+          "rule": "Exact key match; trim whitespace; case-sensitive"
+        }
+      ]
+    },
+    {
+      "ref": "E13",
+      "before": null,
+      "after": "-25.75",
+      "kind": "number",
+      "rowId": "8962944106f356993491",
+      "evidence": [
+        {
+          "file": "contracts-sep.xlsx",
+          "sheet": "合同台账",
+          "row": 8,
+          "cells": [
+            "D8",
+            "C8",
+            "B8"
+          ],
+          "values": [
+            "RV-2609-005",
+            "-25.75",
+            "退款客户"
+          ],
+          "rule": "Exact key match; trim whitespace; case-sensitive"
+        },
+        {
+          "file": "bank-sep.xlsx",
+          "sheet": "银行到账",
+          "row": 9,
+          "cells": [
+            "C9",
+            "A9"
+          ],
+          "values": [
+            "RV-2609-005",
+            "-25.75"
+          ],
+          "rule": "Exact key match; trim whitespace; case-sensitive"
+        }
+      ]
+    },
+    {
+      "ref": "G13",
+      "before": null,
+      "after": "-25.75",
+      "kind": "number",
+      "rowId": "8962944106f356993491",
+      "evidence": [
+        {
+          "file": "contracts-sep.xlsx",
+          "sheet": "合同台账",
+          "row": 8,
+          "cells": [
+            "D8",
+            "C8",
+            "B8"
+          ],
+          "values": [
+            "RV-2609-005",
+            "-25.75",
+            "退款客户"
+          ],
+          "rule": "Exact key match; trim whitespace; case-sensitive"
+        },
+        {
+          "file": "bank-sep.xlsx",
+          "sheet": "银行到账",
+          "row": 9,
+          "cells": [
+            "C9",
+            "A9"
+          ],
+          "values": [
+            "RV-2609-005",
+            "-25.75"
+          ],
+          "rule": "Exact key match; trim whitespace; case-sensitive"
+        }
+      ]
+    },
+    {
+      "ref": "H13",
+      "before": null,
+      "after": "0.00",
+      "kind": "number",
+      "rowId": "8962944106f356993491",
+      "evidence": [
+        {
+          "file": "contracts-sep.xlsx",
+          "sheet": "合同台账",
+          "row": 8,
+          "cells": [
+            "D8",
+            "C8",
+            "B8"
+          ],
+          "values": [
+            "RV-2609-005",
+            "-25.75",
+            "退款客户"
+          ],
+          "rule": "Exact key match; trim whitespace; case-sensitive"
+        },
+        {
+          "file": "bank-sep.xlsx",
+          "sheet": "银行到账",
+          "row": 9,
+          "cells": [
+            "C9",
+            "A9"
+          ],
+          "values": [
+            "RV-2609-005",
+            "-25.75"
+          ],
+          "rule": "Exact key match; trim whitespace; case-sensitive"
+        }
+      ]
+    },
+    {
+      "ref": "I13",
+      "before": null,
+      "after": "matched",
+      "kind": "text",
+      "rowId": "8962944106f356993491",
+      "evidence": [
+        {
+          "file": "contracts-sep.xlsx",
+          "sheet": "合同台账",
+          "row": 8,
+          "cells": [
+            "D8",
+            "C8",
+            "B8"
+          ],
+          "values": [
+            "RV-2609-005",
+            "-25.75",
+            "退款客户"
+          ],
+          "rule": "Exact key match; trim whitespace; case-sensitive"
+        },
+        {
+          "file": "bank-sep.xlsx",
+          "sheet": "银行到账",
+          "row": 9,
+          "cells": [
+            "C9",
+            "A9"
+          ],
+          "values": [
+            "RV-2609-005",
+            "-25.75"
+          ],
+          "rule": "Exact key match; trim whitespace; case-sensitive"
+        }
+      ]
+    },
+    {
+      "ref": "C14",
+      "before": null,
+      "after": "RV-2609-006",
+      "kind": "text",
+      "rowId": "7eb5ebaf3aa87ee5c245",
+      "evidence": [
+        {
+          "file": "contracts-sep.xlsx",
+          "sheet": "合同台账",
+          "row": 9,
+          "cells": [
+            "D9",
+            "C9",
+            "B9"
+          ],
+          "values": [
+            "RV-2609-006",
+            "84.1",
+            "一分差额客户"
+          ],
+          "rule": "Exact key match; trim whitespace; case-sensitive"
+        },
+        {
+          "file": "bank-sep.xlsx",
+          "sheet": "银行到账",
+          "row": 10,
+          "cells": [
+            "C10",
+            "A10"
+          ],
+          "values": [
+            "RV-2609-006",
+            "84.11"
+          ],
+          "rule": "Exact key match; trim whitespace; case-sensitive"
+        }
+      ]
+    },
+    {
+      "ref": "B14",
+      "before": null,
+      "after": "一分差额客户",
+      "kind": "text",
+      "rowId": "7eb5ebaf3aa87ee5c245",
+      "evidence": [
+        {
+          "file": "contracts-sep.xlsx",
+          "sheet": "合同台账",
+          "row": 9,
+          "cells": [
+            "D9",
+            "C9",
+            "B9"
+          ],
+          "values": [
+            "RV-2609-006",
+            "84.1",
+            "一分差额客户"
+          ],
+          "rule": "Exact key match; trim whitespace; case-sensitive"
+        },
+        {
+          "file": "bank-sep.xlsx",
+          "sheet": "银行到账",
+          "row": 10,
+          "cells": [
+            "C10",
+            "A10"
+          ],
+          "values": [
+            "RV-2609-006",
+            "84.11"
+          ],
+          "rule": "Exact key match; trim whitespace; case-sensitive"
+        }
+      ]
+    },
+    {
+      "ref": "E14",
+      "before": null,
+      "after": "84.10",
+      "kind": "number",
+      "rowId": "7eb5ebaf3aa87ee5c245",
+      "evidence": [
+        {
+          "file": "contracts-sep.xlsx",
+          "sheet": "合同台账",
+          "row": 9,
+          "cells": [
+            "D9",
+            "C9",
+            "B9"
+          ],
+          "values": [
+            "RV-2609-006",
+            "84.1",
+            "一分差额客户"
+          ],
+          "rule": "Exact key match; trim whitespace; case-sensitive"
+        },
+        {
+          "file": "bank-sep.xlsx",
+          "sheet": "银行到账",
+          "row": 10,
+          "cells": [
+            "C10",
+            "A10"
+          ],
+          "values": [
+            "RV-2609-006",
+            "84.11"
+          ],
+          "rule": "Exact key match; trim whitespace; case-sensitive"
+        }
+      ]
+    },
+    {
+      "ref": "G14",
+      "before": null,
+      "after": "84.11",
+      "kind": "number",
+      "rowId": "7eb5ebaf3aa87ee5c245",
+      "evidence": [
+        {
+          "file": "contracts-sep.xlsx",
+          "sheet": "合同台账",
+          "row": 9,
+          "cells": [
+            "D9",
+            "C9",
+            "B9"
+          ],
+          "values": [
+            "RV-2609-006",
+            "84.1",
+            "一分差额客户"
+          ],
+          "rule": "Exact key match; trim whitespace; case-sensitive"
+        },
+        {
+          "file": "bank-sep.xlsx",
+          "sheet": "银行到账",
+          "row": 10,
+          "cells": [
+            "C10",
+            "A10"
+          ],
+          "values": [
+            "RV-2609-006",
+            "84.11"
+          ],
+          "rule": "Exact key match; trim whitespace; case-sensitive"
+        }
+      ]
+    },
+    {
+      "ref": "H14",
+      "before": null,
+      "after": "0.01",
+      "kind": "number",
+      "rowId": "7eb5ebaf3aa87ee5c245",
+      "evidence": [
+        {
+          "file": "contracts-sep.xlsx",
+          "sheet": "合同台账",
+          "row": 9,
+          "cells": [
+            "D9",
+            "C9",
+            "B9"
+          ],
+          "values": [
+            "RV-2609-006",
+            "84.1",
+            "一分差额客户"
+          ],
+          "rule": "Exact key match; trim whitespace; case-sensitive"
+        },
+        {
+          "file": "bank-sep.xlsx",
+          "sheet": "银行到账",
+          "row": 10,
+          "cells": [
+            "C10",
+            "A10"
+          ],
+          "values": [
+            "RV-2609-006",
+            "84.11"
+          ],
+          "rule": "Exact key match; trim whitespace; case-sensitive"
+        }
+      ]
+    },
+    {
+      "ref": "I14",
+      "before": null,
+      "after": "amount-difference",
+      "kind": "text",
+      "rowId": "7eb5ebaf3aa87ee5c245",
+      "evidence": [
+        {
+          "file": "contracts-sep.xlsx",
+          "sheet": "合同台账",
+          "row": 9,
+          "cells": [
+            "D9",
+            "C9",
+            "B9"
+          ],
+          "values": [
+            "RV-2609-006",
+            "84.1",
+            "一分差额客户"
+          ],
+          "rule": "Exact key match; trim whitespace; case-sensitive"
+        },
+        {
+          "file": "bank-sep.xlsx",
+          "sheet": "银行到账",
+          "row": 10,
+          "cells": [
+            "C10",
+            "A10"
+          ],
+          "values": [
+            "RV-2609-006",
+            "84.11"
+          ],
+          "rule": "Exact key match; trim whitespace; case-sensitive"
+        }
+      ]
+    },
+    {
+      "ref": "C15",
+      "before": null,
+      "after": "RV-2609-007",
+      "kind": "text",
+      "rowId": "bb48b3b1a58067c8d3f3",
+      "evidence": [
+        {
+          "file": "contracts-sep.xlsx",
+          "sheet": "合同台账",
+          "row": 10,
+          "cells": [
+            "D10",
+            "C10",
+            "B10"
+          ],
+          "values": [
+            "RV-2609-007",
+            "125",
+            "空格编号客户"
+          ],
+          "rule": "Exact key match; trim whitespace; case-sensitive"
+        },
+        {
+          "file": "bank-sep.xlsx",
+          "sheet": "银行到账",
+          "row": 11,
+          "cells": [
+            "C11",
+            "A11"
+          ],
+          "values": [
+            " RV-2609-007 ",
+            "125"
+          ],
+          "rule": "Exact key match; trim whitespace; case-sensitive"
+        }
+      ]
+    },
+    {
+      "ref": "B15",
+      "before": null,
+      "after": "空格编号客户",
+      "kind": "text",
+      "rowId": "bb48b3b1a58067c8d3f3",
+      "evidence": [
+        {
+          "file": "contracts-sep.xlsx",
+          "sheet": "合同台账",
+          "row": 10,
+          "cells": [
+            "D10",
+            "C10",
+            "B10"
+          ],
+          "values": [
+            "RV-2609-007",
+            "125",
+            "空格编号客户"
+          ],
+          "rule": "Exact key match; trim whitespace; case-sensitive"
+        },
+        {
+          "file": "bank-sep.xlsx",
+          "sheet": "银行到账",
+          "row": 11,
+          "cells": [
+            "C11",
+            "A11"
+          ],
+          "values": [
+            " RV-2609-007 ",
+            "125"
+          ],
+          "rule": "Exact key match; trim whitespace; case-sensitive"
+        }
+      ]
+    },
+    {
+      "ref": "E15",
+      "before": null,
+      "after": "125.00",
+      "kind": "number",
+      "rowId": "bb48b3b1a58067c8d3f3",
+      "evidence": [
+        {
+          "file": "contracts-sep.xlsx",
+          "sheet": "合同台账",
+          "row": 10,
+          "cells": [
+            "D10",
+            "C10",
+            "B10"
+          ],
+          "values": [
+            "RV-2609-007",
+            "125",
+            "空格编号客户"
+          ],
+          "rule": "Exact key match; trim whitespace; case-sensitive"
+        },
+        {
+          "file": "bank-sep.xlsx",
+          "sheet": "银行到账",
+          "row": 11,
+          "cells": [
+            "C11",
+            "A11"
+          ],
+          "values": [
+            " RV-2609-007 ",
+            "125"
+          ],
+          "rule": "Exact key match; trim whitespace; case-sensitive"
+        }
+      ]
+    },
+    {
+      "ref": "G15",
+      "before": null,
+      "after": "125.00",
+      "kind": "number",
+      "rowId": "bb48b3b1a58067c8d3f3",
+      "evidence": [
+        {
+          "file": "contracts-sep.xlsx",
+          "sheet": "合同台账",
+          "row": 10,
+          "cells": [
+            "D10",
+            "C10",
+            "B10"
+          ],
+          "values": [
+            "RV-2609-007",
+            "125",
+            "空格编号客户"
+          ],
+          "rule": "Exact key match; trim whitespace; case-sensitive"
+        },
+        {
+          "file": "bank-sep.xlsx",
+          "sheet": "银行到账",
+          "row": 11,
+          "cells": [
+            "C11",
+            "A11"
+          ],
+          "values": [
+            " RV-2609-007 ",
+            "125"
+          ],
+          "rule": "Exact key match; trim whitespace; case-sensitive"
+        }
+      ]
+    },
+    {
+      "ref": "H15",
+      "before": null,
+      "after": "0.00",
+      "kind": "number",
+      "rowId": "bb48b3b1a58067c8d3f3",
+      "evidence": [
+        {
+          "file": "contracts-sep.xlsx",
+          "sheet": "合同台账",
+          "row": 10,
+          "cells": [
+            "D10",
+            "C10",
+            "B10"
+          ],
+          "values": [
+            "RV-2609-007",
+            "125",
+            "空格编号客户"
+          ],
+          "rule": "Exact key match; trim whitespace; case-sensitive"
+        },
+        {
+          "file": "bank-sep.xlsx",
+          "sheet": "银行到账",
+          "row": 11,
+          "cells": [
+            "C11",
+            "A11"
+          ],
+          "values": [
+            " RV-2609-007 ",
+            "125"
+          ],
+          "rule": "Exact key match; trim whitespace; case-sensitive"
+        }
+      ]
+    },
+    {
+      "ref": "I15",
+      "before": null,
+      "after": "matched",
+      "kind": "text",
+      "rowId": "bb48b3b1a58067c8d3f3",
+      "evidence": [
+        {
+          "file": "contracts-sep.xlsx",
+          "sheet": "合同台账",
+          "row": 10,
+          "cells": [
+            "D10",
+            "C10",
+            "B10"
+          ],
+          "values": [
+            "RV-2609-007",
+            "125",
+            "空格编号客户"
+          ],
+          "rule": "Exact key match; trim whitespace; case-sensitive"
+        },
+        {
+          "file": "bank-sep.xlsx",
+          "sheet": "银行到账",
+          "row": 11,
+          "cells": [
+            "C11",
+            "A11"
+          ],
+          "values": [
+            " RV-2609-007 ",
+            "125"
+          ],
+          "rule": "Exact key match; trim whitespace; case-sensitive"
+        }
+      ]
+    },
+    {
+      "ref": "C16",
+      "before": null,
+      "after": "RV-2609-008",
+      "kind": "text",
+      "rowId": "d65bf8d4038746275395",
+      "evidence": [
+        {
+          "file": "bank-sep.xlsx",
+          "sheet": "银行到账",
+          "row": 12,
+          "cells": [
+            "C12",
+            "A12"
+          ],
+          "values": [
+            "RV-2609-008",
+            "90.3"
+          ],
+          "rule": "Exact key match; trim whitespace; case-sensitive"
+        }
+      ]
+    },
+    {
+      "ref": "B16",
+      "before": null,
+      "after": "",
+      "kind": "text",
+      "rowId": "d65bf8d4038746275395",
+      "evidence": [
+        {
+          "file": "bank-sep.xlsx",
+          "sheet": "银行到账",
+          "row": 12,
+          "cells": [
+            "C12",
+            "A12"
+          ],
+          "values": [
+            "RV-2609-008",
+            "90.3"
+          ],
+          "rule": "Exact key match; trim whitespace; case-sensitive"
+        }
+      ]
+    },
+    {
+      "ref": "G16",
+      "before": null,
+      "after": "90.30",
+      "kind": "number",
+      "rowId": "d65bf8d4038746275395",
+      "evidence": [
+        {
+          "file": "bank-sep.xlsx",
+          "sheet": "银行到账",
+          "row": 12,
+          "cells": [
+            "C12",
+            "A12"
+          ],
+          "values": [
+            "RV-2609-008",
+            "90.3"
+          ],
+          "rule": "Exact key match; trim whitespace; case-sensitive"
+        }
+      ]
+    },
+    {
+      "ref": "I16",
+      "before": null,
+      "after": "missing-order",
+      "kind": "text",
+      "rowId": "d65bf8d4038746275395",
+      "evidence": [
+        {
+          "file": "bank-sep.xlsx",
+          "sheet": "银行到账",
+          "row": 12,
+          "cells": [
+            "C12",
+            "A12"
+          ],
+          "values": [
+            "RV-2609-008",
+            "90.3"
+          ],
+          "rule": "Exact key match; trim whitespace; case-sensitive"
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "rows": 8,
+    "matched": 4,
+    "exceptions": 4,
+    "expected": "2794.40",
+    "actual": "2529.51",
+    "difference": "-264.89"
+  },
+  "warnings": [
+    "Totals include only valid, unambiguous amounts; unresolved values are excluded.",
+    "Exports retain original formulas and request recalculation in Excel. Cached formula values are not evidence of recalculation."
+  ],
+  "acknowledgements": [
+    "09cc88f76c73df9fc88b",
+    "8400cad3196168f00508",
+    "7eb5ebaf3aa87ee5c245",
+    "d65bf8d4038746275395"
+  ],
+  "version": 4
+}

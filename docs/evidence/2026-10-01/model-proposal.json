@@ -1,0 +1,49 @@
+{
+  "schemaVersion": 1,
+  "name": "Monthly settlement",
+  "currency": "CNY",
+  "orders": {
+    "path": "contracts-sep.xlsx",
+    "sheet": "合同台账",
+    "headerRow": 2,
+    "key": "D",
+    "amount": "C",
+    "label": "B",
+    "headers": {
+      "key": "合同编号",
+      "amount": "净额应收",
+      "label": "客户名称"
+    }
+  },
+  "settlements": {
+    "path": "bank-sep.xlsx",
+    "sheet": "银行到账",
+    "headerRow": 3,
+    "key": "C",
+    "amount": "A",
+    "headers": {
+      "key": "匹配合同",
+      "amount": "回款金额"
+    }
+  },
+  "match": {
+    "trim": true,
+    "caseSensitive": true,
+    "settlementDuplicates": "sum",
+    "tolerance": "0.00"
+  },
+  "template": {
+    "path": "closeout-template.xlsx",
+    "sheet": "9月核销",
+    "startRow": 9,
+    "endRow": 20,
+    "columns": {
+      "key": "C",
+      "label": "B",
+      "expected": "E",
+      "actual": "G",
+      "difference": "H",
+      "status": "I"
+    }
+  }
+}

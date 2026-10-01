@@ -65,6 +65,7 @@ export class SheetFlowService {
         sheets: book.sheets.map((s) => ({
           name: s.name,
           rows: s.maxRow,
+          headerRow: args.headerRow,
           columns: Array.from({ length: s.maxCol }, (_, i) => ({
             column: columnName(i + 1),
             header: s.cells[columnName(i + 1) + args.headerRow]?.value ?? '',
@@ -75,6 +76,13 @@ export class SheetFlowService {
               (_, j) => s.cells[columnName(j + 1) + (i + args.headerRow + 1)]?.value ?? '',
             ),
           ),
+          sampleRows: Array.from({ length: Math.min(5, Math.max(0, s.maxRow - args.headerRow)) }, (_, i) => ({
+            row: i + args.headerRow + 1,
+            cells: Array.from(
+              { length: s.maxCol },
+              (_, j) => s.cells[columnName(j + 1) + (i + args.headerRow + 1)]?.value ?? '',
+            ),
+          })),
         })),
       }
       return result

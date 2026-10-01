@@ -1,0 +1,116 @@
+{
+  "createdAt": "2026-10-01T08:37:01.208Z",
+  "model": "deepseek-v4-pro",
+  "reasoningEffort": "max",
+  "proposalLatencyMs": 30611,
+  "observedTurnMs": 53686,
+  "recordedTurnMs": 34660,
+  "reviewMs": 578,
+  "exportMs": 91,
+  "correctionCount": 2,
+  "rows": [
+    [
+      "RV-2609-001",
+      "1280.35",
+      "1280.35",
+      "0.00",
+      "matched"
+    ],
+    [
+      "RV-2609-002",
+      "980.50",
+      "975.50",
+      "-5.00",
+      "amount-difference"
+    ],
+    [
+      "RV-2609-003",
+      "0.00",
+      "0.00",
+      "0.00",
+      "matched"
+    ],
+    [
+      "RV-2609-004",
+      "350.20",
+      null,
+      null,
+      "missing-settlement"
+    ],
+    [
+      "RV-2609-005",
+      "-25.75",
+      "-25.75",
+      "0.00",
+      "matched"
+    ],
+    [
+      "RV-2609-006",
+      "84.10",
+      "84.11",
+      "0.01",
+      "amount-difference"
+    ],
+    [
+      "RV-2609-007",
+      "125.00",
+      "125.00",
+      "0.00",
+      "matched"
+    ],
+    [
+      "RV-2609-008",
+      null,
+      "90.30",
+      null,
+      "missing-order"
+    ]
+  ],
+  "totals": {
+    "expected": "2794.40",
+    "actual": "2529.51",
+    "difference": "-264.89"
+  },
+  "acknowledgements": [
+    {
+      "key": "RV-2609-002",
+      "status": "amount-difference",
+      "action": "Acknowledged for export with unresolved exception retained"
+    },
+    {
+      "key": "RV-2609-004",
+      "status": "missing-settlement",
+      "action": "Acknowledged for export with unresolved exception retained"
+    },
+    {
+      "key": "RV-2609-006",
+      "status": "amount-difference",
+      "action": "Acknowledged for export with unresolved exception retained"
+    },
+    {
+      "key": "RV-2609-008",
+      "status": "missing-order",
+      "action": "Acknowledged for export with unresolved exception retained"
+    }
+  ],
+  "files": [
+    {
+      "file": "sheetflow-5f0488c3-ca91-4fb4-a111-980b99fff04a.xlsx",
+      "bytes": 5404,
+      "sha256": "a45922186789960309d986b00e35adde1c9e224184f0daff6b42dfc79fc6fbbc"
+    },
+    {
+      "file": "sheetflow-5f0488c3-ca91-4fb4-a111-980b99fff04a.html",
+      "bytes": 11013,
+      "sha256": "0c29449148d4c2c0311e66f052d3cecc2d73273a4ed3daf23c7ef7f905d481f5"
+    },
+    {
+      "file": "sheetflow-5f0488c3-ca91-4fb4-a111-980b99fff04a.json",
+      "bytes": 47388,
+      "sha256": "5ec3075769730598b573cdef9b85c1667946a9093b2abf0d525841e61b170c78"
+    }
+  ],
+  "originalInputsUnchanged": true,
+  "runtimeErrors": [],
+  "modelEvidence": "model-session-evidence.json"
+}

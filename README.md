@@ -2,11 +2,15 @@
 
 **Fill recurring Excel templates, review reconciliation exceptions, and trace every value to its source.**
 
-**0.1.0 local preview:** tested on Windows with Node 24.19.0 and DSH Web 0.2.0-rc.2. Chinese / English workbench. Three synthetic XLSX examples verified. The DSH tool integration was tested using a local scripted model endpoint; **real DeepSeek mapping quality and real business workbooks have not been verified**. No GitHub or npm release yet.
+> **Financial disclaimer:** SheetFlow assists with data preparation and reconciliation review. It does not provide accounting, tax or financial advice and is not an accounting system. AI mappings and all exported amounts, formulas and exceptions require independent review before business use. Acknowledging an exception does not resolve it or approve a payment.
+
+**0.1.0 local preview:** tested on Windows with Node 24.19.0 and DSH Web 0.2.0-rc.2. Chinese / English workbench. Three examples plus one newly created synthetic blind dataset verified. A real `deepseek-v4-pro` / `max` run proposed the correct columns but needed **two source-header-row corrections** before export. This is one assisted success, not proof of unattended mapping or production workbook compatibility. See the [real model review](docs/real-model-validation.md). No GitHub or npm release yet.
 
 [中文](README.zh-CN.md) · [Compatibility](docs/compatibility.md) · [Validation evidence](docs/validation.md) · [Recipe format](docs/recipes.md)
 
-![Reviewed month-end records, exceptions and evidence](docs/assets/review-workbench.png)
+![Synthetic example data: reviewed month-end records, exceptions and evidence](docs/assets/review-workbench.png)
+
+*Demo screenshot: synthetic example data.*
 
 An independent community plugin for [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness). Start with an orders table, a settlements table, and an existing business template. Confirm the mapping once, preview every write, review every exception, and export a new template copy with an HTML report and JSON trace.
 

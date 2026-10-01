@@ -9,6 +9,29 @@ import type { Preview } from '../../src/shared/model.ts'
 import { workspace, fixture } from '../helpers.ts'
 
 describe('reviewed local workflow', () => {
+  it('reports absolute sample row numbers, including blank rows above an unfamiliar header', async () => {
+    const root = await workspace()
+    await writeFile(
+      path.join(root, 'shifted.csv'),
+      'Report title,,\n,,\nContract,Amount,Customer\nRV-01,1.25,Test\n',
+    )
+    const service = new SheetFlowService()
+    const first = (await service.execute(root, 'a', 'describe', {
+      path: 'shifted.csv',
+    })) as import('../../src/shared/model.ts').FileDescription
+    expect(first.sheets[0].headerRow).toBe(1)
+    expect(first.sheets[0].sampleRows).toEqual([
+      { row: 2, cells: ['', '', ''] },
+      { row: 3, cells: ['Contract', 'Amount', 'Customer'] },
+      { row: 4, cells: ['RV-01', '1.25', 'Test'] },
+    ])
+    const exact = (await service.execute(root, 'a', 'describe', {
+      path: 'shifted.csv',
+      headerRow: 3,
+    })) as import('../../src/shared/model.ts').FileDescription
+    expect(exact.sheets[0].columns[0].header).toBe('Contract')
+    expect(exact.sheets[0].sampleRows[0].row).toBe(4)
+  })
   it('requires exception review, exports three files, retains inputs and survives restart', async () => {
     const root = await workspace(),
       { recipe } = await fixture(),

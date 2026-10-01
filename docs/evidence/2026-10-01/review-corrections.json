@@ -1,0 +1,74 @@
+{
+  "reviewer": "Codex acting as validation operator; not a human user sign-off",
+  "corrections": [
+    {
+      "field": "orders.headerRow",
+      "before": 2,
+      "after": 3,
+      "reason": "Model miscounted the source header position by one row. The inspection included blank sample rows but did not explicitly label their absolute worksheet row numbers. Reviewer checked the actual rows and exact headers."
+    },
+    {
+      "field": "settlements.headerRow",
+      "before": 3,
+      "after": 4,
+      "reason": "Model miscounted the source header position by one row. The inspection included blank sample rows but did not explicitly label their absolute worksheet row numbers. Reviewer checked the actual rows and exact headers."
+    }
+  ],
+  "rejectedOriginalProposal": {
+    "ok": false,
+    "error": {
+      "code": "header-changed",
+      "message": "Header changed for contracts-sep.xlsx / 合同台账 / D. Reinspect and confirm the mapping.",
+      "details": {}
+    }
+  },
+  "reviewedRecipe": {
+    "schemaVersion": 1,
+    "name": "Monthly settlement",
+    "currency": "CNY",
+    "orders": {
+      "path": "contracts-sep.xlsx",
+      "sheet": "合同台账",
+      "headerRow": 3,
+      "key": "D",
+      "amount": "C",
+      "label": "B",
+      "headers": {
+        "key": "合同编号",
+        "amount": "净额应收",
+        "label": "客户名称"
+      }
+    },
+    "settlements": {
+      "path": "bank-sep.xlsx",
+      "sheet": "银行到账",
+      "headerRow": 4,
+      "key": "C",
+      "amount": "A",
+      "headers": {
+        "key": "匹配合同",
+        "amount": "回款金额"
+      }
+    },
+    "match": {
+      "trim": true,
+      "caseSensitive": true,
+      "settlementDuplicates": "sum",
+      "tolerance": "0.00"
+    },
+    "template": {
+      "path": "closeout-template.xlsx",
+      "sheet": "9月核销",
+      "startRow": 9,
+      "endRow": 20,
+      "columns": {
+        "key": "C",
+        "label": "B",
+        "expected": "E",
+        "actual": "G",
+        "difference": "H",
+        "status": "I"
+      }
+    }
+  }
+}

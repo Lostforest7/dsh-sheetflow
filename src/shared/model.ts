@@ -94,7 +94,14 @@ export type FileDescription = {
   path: string
   hash: string
   format: string
-  sheets: { name: string; rows: number; columns: { column: string; header: string }[]; sample: string[][] }[]
+  sheets: {
+    name: string
+    rows: number
+    headerRow: number
+    columns: { column: string; header: string }[]
+    sample: string[][]
+    sampleRows: { row: number; cells: string[] }[]
+  }[]
 }
 export type Evidence = {
   file: string

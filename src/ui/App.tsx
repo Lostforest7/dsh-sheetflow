@@ -622,7 +622,7 @@ export function App({ api, onClose }: { api: FlowApi; onClose?: () => void }) {
                   onClick={() =>
                     void task(async () => {
                       await api.send!(
-                        'Use sheetflow_propose_recipe to propose a schemaVersion 1 recipe for HUMAN REVIEW. Do not edit source files or export results. Preserve the recipe structure below, set valid file paths, sheet names, columns and exact headers based on the inspected inputs. Amounts are plain decimals with <=2 places; duplicates must be explicitly reject or sum. User instruction: ' +
+                        'Use sheetflow_inspect to verify both source header rows, using absolute sampleRows[].row values (blank rows count). Re-inspect each proposed headerRow and confirm its column headers before calling sheetflow_propose_recipe to propose a schemaVersion 1 recipe for HUMAN REVIEW. Do not edit source files or export results. Preserve the recipe structure below, set valid file paths, sheet names, columns and exact headers based on the inspected inputs. Amounts are plain decimals with <=2 places; duplicates must be explicitly reject or sum. User instruction: ' +
                           request +
                           '\nRecipe structure:\n' +
                           JSON.stringify(recipe, null, 2) +

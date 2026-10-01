@@ -1,0 +1,25 @@
+{
+  "repository": "dsh-sheetflow",
+  "ownerHint": "Lostforest7",
+  "aboutFile": "docs/releases/about.txt",
+  "topics": ["dsh-plugin"],
+  "branch": "main",
+  "tag": "v0.1.0-pre",
+  "title": "DSH SheetFlow v0.1.0-pre — AI suggests, you confirm, SheetFlow executes",
+  "prerelease": true,
+  "bodyFile": "docs/releases/v0.1.0-pre.md",
+  "status": "prepared locally; not uploaded",
+  "publishGate": "User explicitly replies: Excel 检查通过",
+  "excelManualReview": "pending",
+  "npmPublish": false,
+  "assets": [
+    "dist/dsh-sheetflow-0.1.0.tgz",
+    "dist/dsh-sheetflow-0.1.0-source.zip",
+    "dist/dsh-sheetflow-validation-20261001.zip"
+  ],
+  "beforePublication": [
+    "Record the user's manual Excel result and update pending statements without claiming new automated validation.",
+    "Confirm the authenticated GitHub owner and adjust draft links if necessary.",
+    "Create the repository, push main and v0.1.0-pre, then create a GitHub Pre-release only."
+  ]
+}

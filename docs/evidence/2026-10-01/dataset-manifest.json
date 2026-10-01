@@ -1,0 +1,21 @@
+{
+  "createdAt": "2026-10-01T08:29:02.990Z",
+  "dataset": "new synthetic contract/bank/template triple; not existing fixtures",
+  "files": [
+    {
+      "file": "bank-sep.xlsx",
+      "bytes": 4189,
+      "sha256": "70e05eca71f60a962250087b93c0d059c8814c950d311dca2c446312cec9de59"
+    },
+    {
+      "file": "closeout-template.xlsx",
+      "bytes": 5072,
+      "sha256": "cc04047c6e70928b6f28a5bf86821ff73286e6bd8c110111c074963615a199fc"
+    },
+    {
+      "file": "contracts-sep.xlsx",
+      "bytes": 4252,
+      "sha256": "cb614ab1b80634346a752d342f4e0ac8d7339dae16a70c45b4705d8ec0f8f186"
+    }
+  ]
+}

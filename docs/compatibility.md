@@ -8,12 +8,14 @@
 | Node | 24.19.0 |
 | DSH | Web 0.2.0-rc.2, isolated profile |
 | Browser | Installed Windows Google Chrome, headless Playwright |
-| Inputs | Three sets of synthetic XLSX tables and ordinary templates; UTF-8 CSV parser tests |
+| Inputs | Three existing synthetic XLSX examples plus one newly authored blind dataset; UTF-8 CSV parser tests |
 | Language | Chinese / English workbench; bilingual HTML report labels; internal issue codes and errors in English |
-| Model integration | Real DSH session prompt and tool execution through a **local scripted Messages server** |
-| Real model mapping | **Unverified** |
+| Model integration | Real DSH session/tool execution tested with scripted transport and with the configured DeepSeek API |
+| Real model mapping | One `deepseek-v4-pro` / `max` blind run; correct columns, **two corrected source header rows**, then verified export |
 
 The Node engine accepts 22.19+ in the 22.x line and 24+, but only Node 24.19.0 has been exercised. Desktop, CLI-only UI, macOS/Linux, remote workspaces, other DSH releases, and real accounting datasets remain unverified.
+
+The first blind run predates the inspection row-number improvement. That improvement has a regression test but has not received another paid model test. See [the full evidence](real-model-validation.md).
 
 ## Supported business shape
 
