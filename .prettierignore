@@ -1,0 +1,9 @@
+node_modules
+lib
+work
+.cache
+test-results
+playwright-report
+package-lock.json
+*.xlsx
+*.png

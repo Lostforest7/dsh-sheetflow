@@ -1,0 +1,75 @@
+{
+  "at": "2026-10-01T07:49:20.837Z",
+  "synthetic": true,
+  "results": [
+    {
+      "name": "month-end",
+      "summary": {
+        "rows": 8,
+        "matched": 2,
+        "exceptions": 6,
+        "expected": "555.50",
+        "actual": "430.00",
+        "difference": "-125.50"
+      },
+      "cellChanges": 37,
+      "independentImport": true,
+      "formulaEngine": "artifact-tool (not Excel)",
+      "recalculatedTotals": [
+        555.5,
+        430
+      ],
+      "inputHashes": {
+        "orders.xlsx": "a653ac43b9e350c8b31805e500a1d9a44033242f8e5aa8b4c10a2789c2717a30",
+        "settlements.xlsx": "3a8e029a5f02cc7134b24e742531324800fe8487543ca2db82db61adcae35b8b",
+        "template.xlsx": "a8fe223ea1fa5d796a8034e1fbd0cd089622da0c4d5c8c9e098b361bce5c8a3a"
+      }
+    },
+    {
+      "name": "next-month",
+      "summary": {
+        "rows": 4,
+        "matched": 4,
+        "exceptions": 0,
+        "expected": "600.29",
+        "actual": "600.29",
+        "difference": "0.00"
+      },
+      "cellChanges": 24,
+      "independentImport": true,
+      "formulaEngine": "artifact-tool (not Excel)",
+      "recalculatedTotals": [
+        600.29,
+        600.29
+      ],
+      "inputHashes": {
+        "orders.xlsx": "4745553e7c2d141d7e8112dd336923d3fcc1889ad50efcd96a208b20da7a3e41",
+        "settlements.xlsx": "24cce6f5c46ecd783aae91f8b3af8fcd10ada9f82b3ff3d237e15ee501c59e24",
+        "template.xlsx": "c29ec8b87eb6129691308ab9fde809bcc54240274e88d3c94a6e5f1e96a61feb"
+      }
+    },
+    {
+      "name": "alternate-template",
+      "summary": {
+        "rows": 3,
+        "matched": 2,
+        "exceptions": 1,
+        "expected": "2350.25",
+        "actual": "2340.25",
+        "difference": "-10.00"
+      },
+      "cellChanges": 17,
+      "independentImport": true,
+      "formulaEngine": "artifact-tool (not Excel)",
+      "recalculatedTotals": [
+        2350.25,
+        2340.25
+      ],
+      "inputHashes": {
+        "orders.xlsx": "97206625cf54ff4a77c5af78d456e6420117fbfcbaa6d5336b62a617cdcae947",
+        "settlements.xlsx": "71e580a38b42c02460ec06c1753ce3ea56ee3c8feb1f1c322c0e7274828de0a5",
+        "template.xlsx": "9a35af449e7080c0d640e382f9a24cc8d8a14ab23df48ca39804c6f415773c1c"
+      }
+    }
+  ]
+}

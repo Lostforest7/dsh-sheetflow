@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "name": "Monthly settlement",
+  "currency": "CNY",
+  "orders": {
+    "path": "orders.xlsx",
+    "sheet": "Orders",
+    "headerRow": 1,
+    "key": "A",
+    "amount": "C",
+    "label": "B",
+    "headers": { "key": "Order ID", "amount": "Expected amount", "label": "Customer" }
+  },
+  "settlements": {
+    "path": "settlements.xlsx",
+    "sheet": "Settlements",
+    "headerRow": 1,
+    "key": "A",
+    "amount": "B",
+    "headers": { "key": "Order number", "amount": "Received amount" }
+  },
+  "match": { "trim": true, "caseSensitive": true, "settlementDuplicates": "reject", "tolerance": "0.00" },
+  "template": {
+    "path": "template.xlsx",
+    "sheet": "Monthly settlement",
+    "startRow": 6,
+    "endRow": 35,
+    "columns": { "key": "A", "label": "B", "expected": "C", "actual": "D", "difference": "E", "status": "F" }
+  }
+}

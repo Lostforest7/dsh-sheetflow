@@ -1,0 +1,64 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src data:"><meta name="viewport" content="width=device-width, initial-scale=1"><title>SheetFlow review</title>
+ <style>body{font:14px system-ui;max-width:1500px;margin:40px auto;padding:24px;color:#172434}h1{font-size:28px}table{border-collapse:collapse;width:100%}th,td{text-align:left;padding:12px;border-bottom:1px solid #ddd;vertical-align:top;overflow-wrap:anywhere}th{background:#e9f0f4}small{color:#536579}pre{white-space:pre-wrap;overflow-wrap:anywhere}.scroll{overflow-x:auto}</style>
+ <h1>Monthly settlement</h1><p>DSH SheetFlow · 2026-10-01T07:49:16.057Z · CNY</p>
+ <p>8 records / 记录 · 6 exceptions / 异常 · 6 acknowledged / 已核对</p>
+ <p>应收 / Expected: 555.50 · 到账 / Actual: 430.00 · 差额 / Difference: -125.50</p>
+ <p>合计仅含有效且无歧义金额。核对记录不表示异常已经解决。Totals include only valid, unambiguous amounts. Missing or invalid values stay unavailable. Acknowledgement records review; it does not resolve an exception.</p>
+ <p>Totals include only valid, unambiguous amounts; unresolved values are excluded.</p><p>Exports retain original formulas and request recalculation in Excel. Cached formula values are not evidence of recalculation.</p>
+ <div class="scroll"><table><thead><tr><th>编号 / Key</th><th>名称 / Label</th><th>应收 / Expected</th><th>到账 / Actual</th><th>差额 / Difference</th><th>状态 / Status</th><th>异常与核对 / Issues & review</th><th>来源 / Evidence</th></tr></thead><tbody><tr><td>00001</td><td>North Studio</td><td>100.00</td><td>100.00</td><td>0.00</td><td>matched</td><td><br>—</td><td>orders.xlsx / Orders / row 2 / A2, C2, B2<br>00001 · 100 · North Studio<br>Exact key match; trim whitespace; case-sensitive<hr>settlements.xlsx / Settlements / row 2 / A2, B2<br>00001 · 100<br>Exact key match; trim whitespace; case-sensitive</td></tr><tr><td>00002</td><td>River Shop</td><td>250.00</td><td>240.00</td><td>-10.00</td><td>amount-difference</td><td>amount-difference<br>已核对 / Acknowledged</td><td>orders.xlsx / Orders / row 3 / A3, C3, B3<br>00002 · 250 · River Shop<br>Exact key match; trim whitespace; case-sensitive<hr>settlements.xlsx / Settlements / row 3 / A3, B3<br>00002 · 240<br>Exact key match; trim whitespace; case-sensitive</td></tr><tr><td>00003</td><td>Acorn Co</td><td>75.50</td><td>unavailable</td><td>unavailable</td><td>missing-settlement</td><td>missing-settlement<br>已核对 / Acknowledged</td><td>orders.xlsx / Orders / row 4 / A4, C4, B4<br>00003 · 75.5 · Acorn Co<br>Exact key match; trim whitespace; case-sensitive</td></tr><tr><td>00004</td><td>Harbor Lab</td><td>120.00</td><td>unavailable</td><td>unavailable</td><td>duplicate-settlement</td><td>duplicate-settlement<br>已核对 / Acknowledged</td><td>orders.xlsx / Orders / row 5 / A5, C5, B5<br>00004 · 120 · Harbor Lab<br>Exact key match; trim whitespace; case-sensitive<hr>settlements.xlsx / Settlements / row 4 / A4, B4<br>00004 · 70<br>Exact key match; trim whitespace; case-sensitive<hr>settlements.xlsx / Settlements / row 5 / A5, B5<br>00004 · 50<br>Exact key match; trim whitespace; case-sensitive</td></tr><tr><td>00005</td><td>Bright Works</td><td>unavailable</td><td>50.00</td><td>unavailable</td><td>duplicate-order</td><td>duplicate-order<br>已核对 / Acknowledged</td><td>orders.xlsx / Orders / row 6 / A6, C6, B6<br>00005 · 50 · Bright Works<br>Exact key match; trim whitespace; case-sensitive<hr>orders.xlsx / Orders / row 7 / A7, C7, B7<br>00005 · 50 · Bright Works<br>Exact key match; trim whitespace; case-sensitive<hr>settlements.xlsx / Settlements / row 6 / A6, B6<br>00005 · 50<br>Exact key match; trim whitespace; case-sensitive</td></tr><tr><td>00006</td><td>Plain Co</td><td>unavailable</td><td>unavailable</td><td>unavailable</td><td>invalid-input</td><td>invalid-amount, missing-settlement<br>已核对 / Acknowledged</td><td>orders.xlsx / Orders / row 8 / A8, C8, B8<br>00006 ·  · Plain Co<br>Exact key match; trim whitespace; case-sensitive</td></tr><tr><td>00007</td><td>=HYPERLINK(&quot;https://example.invalid&quot;,&quot;literal&quot;)</td><td>10.00</td><td>10.00</td><td>0.00</td><td>matched</td><td><br>—</td><td>orders.xlsx / Orders / row 9 / A9, C9, B9<br>00007 · 10 · =HYPERLINK(&quot;https://example.invalid&quot;,&quot;literal&quot;)<br>Exact key match; trim whitespace; case-sensitive<hr>settlements.xlsx / Settlements / row 8 / A8, B8<br>00007 · 10<br>Exact key match; trim whitespace; case-sensitive</td></tr><tr><td>00008</td><td></td><td>unavailable</td><td>30.00</td><td>unavailable</td><td>missing-order</td><td>missing-order<br>已核对 / Acknowledged</td><td>settlements.xlsx / Settlements / row 7 / A7, B7<br>00008 · 30<br>Exact key match; trim whitespace; case-sensitive</td></tr></tbody></table></div>
+ <h2>完整写入差异 / All cell changes (37)</h2><table><thead><tr><th>Cell</th><th>Before</th><th>After</th><th>Record ID</th></tr></thead><tbody><tr><td>A6</td><td>∅</td><td>00001</td><td>10443e08fc895c52026b</td></tr><tr><td>B6</td><td>∅</td><td>North Studio</td><td>10443e08fc895c52026b</td></tr><tr><td>C6</td><td>∅</td><td>100.00</td><td>10443e08fc895c52026b</td></tr><tr><td>D6</td><td>∅</td><td>100.00</td><td>10443e08fc895c52026b</td></tr><tr><td>E6</td><td>∅</td><td>0.00</td><td>10443e08fc895c52026b</td></tr><tr><td>F6</td><td>∅</td><td>matched</td><td>10443e08fc895c52026b</td></tr><tr><td>A7</td><td>∅</td><td>00002</td><td>6e91361acad7ee0a40dd</td></tr><tr><td>B7</td><td>∅</td><td>River Shop</td><td>6e91361acad7ee0a40dd</td></tr><tr><td>C7</td><td>∅</td><td>250.00</td><td>6e91361acad7ee0a40dd</td></tr><tr><td>D7</td><td>∅</td><td>240.00</td><td>6e91361acad7ee0a40dd</td></tr><tr><td>E7</td><td>∅</td><td>-10.00</td><td>6e91361acad7ee0a40dd</td></tr><tr><td>F7</td><td>∅</td><td>amount-difference</td><td>6e91361acad7ee0a40dd</td></tr><tr><td>A8</td><td>∅</td><td>00003</td><td>0bc17f7bc257f6b1b219</td></tr><tr><td>B8</td><td>∅</td><td>Acorn Co</td><td>0bc17f7bc257f6b1b219</td></tr><tr><td>C8</td><td>∅</td><td>75.50</td><td>0bc17f7bc257f6b1b219</td></tr><tr><td>F8</td><td>∅</td><td>missing-settlement</td><td>0bc17f7bc257f6b1b219</td></tr><tr><td>A9</td><td>∅</td><td>00004</td><td>a7d7cb93e2c3d0167214</td></tr><tr><td>B9</td><td>∅</td><td>Harbor Lab</td><td>a7d7cb93e2c3d0167214</td></tr><tr><td>C9</td><td>∅</td><td>120.00</td><td>a7d7cb93e2c3d0167214</td></tr><tr><td>F9</td><td>∅</td><td>duplicate-settlement</td><td>a7d7cb93e2c3d0167214</td></tr><tr><td>A10</td><td>∅</td><td>00005</td><td>b461d691382c4e3cbe06</td></tr><tr><td>B10</td><td>∅</td><td>Bright Works</td><td>b461d691382c4e3cbe06</td></tr><tr><td>D10</td><td>∅</td><td>50.00</td><td>b461d691382c4e3cbe06</td></tr><tr><td>F10</td><td>∅</td><td>duplicate-order</td><td>b461d691382c4e3cbe06</td></tr><tr><td>A11</td><td>∅</td><td>00006</td><td>9e6a4d1fe444956c77ca</td></tr><tr><td>B11</td><td>∅</td><td>Plain Co</td><td>9e6a4d1fe444956c77ca</td></tr><tr><td>F11</td><td>∅</td><td>invalid-input</td><td>9e6a4d1fe444956c77ca</td></tr><tr><td>A12</td><td>∅</td><td>00007</td><td>50c2ca849ee0c0de0792</td></tr><tr><td>B12</td><td>∅</td><td>=HYPERLINK(&quot;https://example.invalid&quot;,&quot;literal&quot;)</td><td>50c2ca849ee0c0de0792</td></tr><tr><td>C12</td><td>∅</td><td>10.00</td><td>50c2ca849ee0c0de0792</td></tr><tr><td>D12</td><td>∅</td><td>10.00</td><td>50c2ca849ee0c0de0792</td></tr><tr><td>E12</td><td>∅</td><td>0.00</td><td>50c2ca849ee0c0de0792</td></tr><tr><td>F12</td><td>∅</td><td>matched</td><td>50c2ca849ee0c0de0792</td></tr><tr><td>A13</td><td>∅</td><td>00008</td><td>bbc38e6314bf79e1a223</td></tr><tr><td>B13</td><td>∅</td><td></td><td>bbc38e6314bf79e1a223</td></tr><tr><td>D13</td><td>∅</td><td>30.00</td><td>bbc38e6314bf79e1a223</td></tr><tr><td>F13</td><td>∅</td><td>missing-order</td><td>bbc38e6314bf79e1a223</td></tr></tbody></table>
+ <h2>输入指纹 / Input fingerprints</h2><pre>{
+  &quot;orders.xlsx&quot;: &quot;a653ac43b9e350c8b31805e500a1d9a44033242f8e5aa8b4c10a2789c2717a30&quot;,
+  &quot;settlements.xlsx&quot;: &quot;3a8e029a5f02cc7134b24e742531324800fe8487543ca2db82db61adcae35b8b&quot;,
+  &quot;template.xlsx&quot;: &quot;a8fe223ea1fa5d796a8034e1fbd0cd089622da0c4d5c8c9e098b361bce5c8a3a&quot;
+}</pre>
+ <h2>规则 / Recipe</h2><pre>{
+  &quot;schemaVersion&quot;: 1,
+  &quot;name&quot;: &quot;Monthly settlement&quot;,
+  &quot;currency&quot;: &quot;CNY&quot;,
+  &quot;orders&quot;: {
+    &quot;path&quot;: &quot;orders.xlsx&quot;,
+    &quot;sheet&quot;: &quot;Orders&quot;,
+    &quot;headerRow&quot;: 1,
+    &quot;key&quot;: &quot;A&quot;,
+    &quot;amount&quot;: &quot;C&quot;,
+    &quot;label&quot;: &quot;B&quot;,
+    &quot;headers&quot;: {
+      &quot;key&quot;: &quot;Order ID&quot;,
+      &quot;amount&quot;: &quot;Expected amount&quot;,
+      &quot;label&quot;: &quot;Customer&quot;
+    }
+  },
+  &quot;settlements&quot;: {
+    &quot;path&quot;: &quot;settlements.xlsx&quot;,
+    &quot;sheet&quot;: &quot;Settlements&quot;,
+    &quot;headerRow&quot;: 1,
+    &quot;key&quot;: &quot;A&quot;,
+    &quot;amount&quot;: &quot;B&quot;,
+    &quot;headers&quot;: {
+      &quot;key&quot;: &quot;Order number&quot;,
+      &quot;amount&quot;: &quot;Received amount&quot;
+    }
+  },
+  &quot;match&quot;: {
+    &quot;trim&quot;: true,
+    &quot;caseSensitive&quot;: true,
+    &quot;settlementDuplicates&quot;: &quot;reject&quot;,
+    &quot;tolerance&quot;: &quot;0.00&quot;
+  },
+  &quot;template&quot;: {
+    &quot;path&quot;: &quot;template.xlsx&quot;,
+    &quot;sheet&quot;: &quot;Monthly settlement&quot;,
+    &quot;startRow&quot;: 6,
+    &quot;endRow&quot;: 35,
+    &quot;columns&quot;: {
+      &quot;key&quot;: &quot;A&quot;,
+      &quot;label&quot;: &quot;B&quot;,
+      &quot;expected&quot;: &quot;C&quot;,
+      &quot;actual&quot;: &quot;D&quot;,
+      &quot;difference&quot;: &quot;E&quot;,
+      &quot;status&quot;: &quot;F&quot;
+    }
+  }
+}</pre>
+ <small>Independent community plugin. XLSX formulas are preserved and request recalculation when opened; SheetFlow does not calculate Excel formulas. 保留公式并请求 Excel 重算；插件自身不计算公式。</small></html>
