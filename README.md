@@ -8,6 +8,8 @@
 
 [中文](README.zh-CN.md) · [Compatibility](docs/compatibility.md) · [Validation evidence](docs/validation.md) · [Recipe format](docs/recipes.md)
 
+The blind export also passed a delegated native Microsoft Excel UI check: forced recalculation, a live formula edit/undo, all eight rows and three merged regions. [Screenshots and results](docs/evidence/2026-10-01/excel-verification.json). This was operated by Codex on synthetic data, not a human accounting sign-off.
+
 ![Synthetic example data: reviewed month-end records, exceptions and evidence](docs/assets/review-workbench.png)
 
 *Demo screenshot: synthetic example data.*

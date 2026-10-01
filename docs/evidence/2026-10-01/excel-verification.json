@@ -1,0 +1,266 @@
+{
+  "completed": true,
+  "passed": true,
+  "recordedAt": "2026-10-01T09:42:25.324Z",
+  "operator": "Codex, explicitly delegated by the user via Computer Use; not a human manual sign-off",
+  "application": "Microsoft Excel desktop",
+  "excelVersion": "16.0.20326.20158",
+  "method": "Native UI through Computer Use (@oai/sky), no add-in, COM or substitute formula engine",
+  "file": "sheetflow-5f0488c3-ca91-4fb4-a111-980b99fff04a.xlsx",
+  "sheet": "9月核销",
+  "syntheticData": true,
+  "openedReadOnly": true,
+  "forcedRecalculation": "Ctrl+Alt+F9",
+  "summary": {
+    "E4": "2,794.40",
+    "G4": "2,529.51",
+    "I4": "(264.89)",
+    "formulaErrors": []
+  },
+  "merges": [
+    {
+      "range": "A2:I2",
+      "text": "2026年9月合同回款核销表（CNY）",
+      "confirmed": "native single-cell selection spans A:I; Merge Center ribbon button active",
+      "screenshot": "09-excel-title-merge.jpg"
+    },
+    {
+      "range": "A6:I6",
+      "text": "明细填报区：第9至20行；单位人民币元；备注和公式复核列保留。",
+      "confirmed": "native single-cell selection spans A:I; Merge Center ribbon button active",
+      "screenshot": "10-excel-note-merge.jpg"
+    },
+    {
+      "range": "A22:I22",
+      "text": "模板页脚：保留合并区域与公式；异常需单独复核。",
+      "confirmed": "native single-cell selection spans A:I; Merge Center ribbon button active",
+      "screenshot": "11-excel-footer-merge.jpg"
+    }
+  ],
+  "liveFormula": {
+    "cell": "D10",
+    "expression": "=IF(AND(ISNUMBER(E10),ISNUMBER(G10)),G10-E10,\"\")",
+    "initial": {
+      "E10": "980.50",
+      "D10": "-5.00",
+      "E4": "2794.40"
+    },
+    "temporary": {
+      "E10": "981.50",
+      "D10": "-6.00",
+      "E4": "2795.40"
+    },
+    "undo": "Ctrl+Z immediately after observing the recalculated result",
+    "restored": {
+      "E10": "980.50",
+      "D10": "(5.00)",
+      "E4": "2,794.40"
+    },
+    "saved": false,
+    "screenshotEvidence": [
+      "06-excel-live-formula.jpg",
+      "07-excel-changed.jpg",
+      "08-excel-restored.jpg"
+    ],
+    "observationNote": "Excel UI Automation text lagged one capture during edits; the actual native screenshot was used to verify the temporary -6.00 result. UIA set_value did not commit an edit; F2, select contents, type, Return did.",
+    "closedWithoutSaving": true
+  },
+  "detailRows": [
+    {
+      "row": 9,
+      "id": "RV-2609-001",
+      "expected": [
+        "1,280.35",
+        "1,280.35",
+        "0.00",
+        "matched"
+      ],
+      "displayed": [
+        "1,280.35",
+        "1,280.35",
+        "0.00",
+        "matched"
+      ],
+      "passed": true
+    },
+    {
+      "row": 10,
+      "id": "RV-2609-002",
+      "expected": [
+        "980.50",
+        "975.50",
+        "(5.00)",
+        "amount-difference"
+      ],
+      "displayed": [
+        "980.50",
+        "975.50",
+        "(5.00)",
+        "amount-difference"
+      ],
+      "passed": true
+    },
+    {
+      "row": 11,
+      "id": "RV-2609-003",
+      "expected": [
+        "0.00",
+        "0.00",
+        "0.00",
+        "matched"
+      ],
+      "displayed": [
+        "0.00",
+        "0.00",
+        "0.00",
+        "matched"
+      ],
+      "passed": true
+    },
+    {
+      "row": 12,
+      "id": "RV-2609-004",
+      "expected": [
+        "350.20",
+        "",
+        "",
+        "missing-settlement"
+      ],
+      "displayed": [
+        "350.20",
+        "",
+        "",
+        "missing-settlement"
+      ],
+      "passed": true
+    },
+    {
+      "row": 13,
+      "id": "RV-2609-005",
+      "expected": [
+        "(25.75)",
+        "(25.75)",
+        "0.00",
+        "matched"
+      ],
+      "displayed": [
+        "(25.75)",
+        "(25.75)",
+        "0.00",
+        "matched"
+      ],
+      "passed": true
+    },
+    {
+      "row": 14,
+      "id": "RV-2609-006",
+      "expected": [
+        "84.10",
+        "84.11",
+        "0.01",
+        "amount-difference"
+      ],
+      "displayed": [
+        "84.10",
+        "84.11",
+        "0.01",
+        "amount-difference"
+      ],
+      "passed": true
+    },
+    {
+      "row": 15,
+      "id": "RV-2609-007",
+      "expected": [
+        "125.00",
+        "125.00",
+        "0.00",
+        "matched"
+      ],
+      "displayed": [
+        "125.00",
+        "125.00",
+        "0.00",
+        "matched"
+      ],
+      "passed": true
+    },
+    {
+      "row": 16,
+      "id": "RV-2609-008",
+      "expected": [
+        "",
+        "90.30",
+        "",
+        "missing-order"
+      ],
+      "displayed": [
+        "",
+        "90.30",
+        "",
+        "missing-order"
+      ],
+      "passed": true
+    }
+  ],
+  "notes": {
+    "A9": "模板固定备注",
+    "A22": "模板页脚：保留合并区域与公式；异常需单独复核。"
+  },
+  "fiveChecks": [
+    "recalculated totals / no displayed formula errors",
+    "title and note merged regions",
+    "live formula change and undo",
+    "all eight detail rows",
+    "merged footer and fixed note"
+  ],
+  "diskIntegrity": {
+    "sha256Before": "A45922186789960309D986B00E35ADDE1C9E224184F0DAFF6B42DFC79FC6FBBC",
+    "sha256After": "A45922186789960309D986B00E35ADDE1C9E224184F0DAFF6B42DFC79FC6FBBC",
+    "unchanged": true,
+    "checkedAfterClose": true
+  },
+  "publication": {
+    "githubPublished": false,
+    "npmPublished": false,
+    "userReleaseConfirmation": "pending; previous explicit gate requires Excel 检查通过"
+  },
+  "screenshots": [
+    {
+      "file": "05-excel-overview.jpg",
+      "sha256": "edca08e3fa9f995330c0b05541fbf63140274a93009d89f61e6e1b03e00dfa66",
+      "bytes": 140412
+    },
+    {
+      "file": "06-excel-live-formula.jpg",
+      "sha256": "f6a5a95c7a886b1f18f1e2e2291c65f28d4f7edc58599a8a6fd910894dacc413",
+      "bytes": 154740
+    },
+    {
+      "file": "07-excel-changed.jpg",
+      "sha256": "b959e3cbf8a1751e51baa05babe59ec3543532fe5d8f2ec6c3171dc59bfa42d9",
+      "bytes": 151180
+    },
+    {
+      "file": "08-excel-restored.jpg",
+      "sha256": "49dfc1c9c020b6470b7d3877e4fa4efaf78fa9ac8e5f4ff4b8af156e32ecd4fe",
+      "bytes": 151479
+    },
+    {
+      "file": "09-excel-title-merge.jpg",
+      "sha256": "acb1514af6c4a8d2985ecb6b40cffbc2dc8ac344a3108d90e95f9a1826cb1299",
+      "bytes": 148829
+    },
+    {
+      "file": "10-excel-note-merge.jpg",
+      "sha256": "24db67826d527ae71047633821941fe4db1f5b8362fe2638e50c654fafd615fc",
+      "bytes": 150498
+    },
+    {
+      "file": "11-excel-footer-merge.jpg",
+      "sha256": "eb508eab37c059d516d3080443f51e9b461db6adcb5ce510d2d16f9eeed13622",
+      "bytes": 147246
+    }
+  ],
+  "applicationFriction": "Multiple Excel launches initially produced blank windows and a file-in-use dialog; the actual native check used the committed export read-only. Modal accessibility indexes were unreliable, so observed screenshot buttons were used. No add-ins or recent-file list were opened."
+}

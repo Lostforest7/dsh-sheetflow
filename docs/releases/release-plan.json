@@ -10,7 +10,9 @@
   "bodyFile": "docs/releases/v0.1.0-pre.md",
   "status": "prepared locally; not uploaded",
   "publishGate": "User explicitly replies: Excel 检查通过",
-  "excelManualReview": "pending",
+  "excelManualReview": "not performed by human; user explicitly delegated native UI check to Codex",
+  "excelNativeReview": "five checks passed in Microsoft Excel 16.0.20326.20158; temporary edit undone; closed without saving; workbook hash unchanged",
+  "excelEvidence": "docs/evidence/2026-10-01/excel-verification.json",
   "npmPublish": false,
   "assets": [
     "dist/dsh-sheetflow-0.1.0.tgz",
@@ -18,7 +20,7 @@
     "dist/dsh-sheetflow-validation-20261001.zip"
   ],
   "beforePublication": [
-    "Record the user's manual Excel result and update pending statements without claiming new automated validation.",
+    "Wait for the user's explicit Excel 检查通过 release confirmation; update gate statements with the actual delegated Excel result and user approval, never claiming a human manual sign-off.",
     "Confirm the authenticated GitHub owner and adjust draft links if necessary.",
     "Create the repository, push main and v0.1.0-pre, then create a GitHub Pre-release only."
   ]

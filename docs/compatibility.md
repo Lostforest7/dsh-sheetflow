@@ -12,6 +12,7 @@
 | Language | Chinese / English workbench; bilingual HTML report labels; internal issue codes and errors in English |
 | Model integration | Real DSH session/tool execution tested with scripted transport and with the configured DeepSeek API |
 | Real model mapping | One `deepseek-v4-pro` / `max` blind run; correct columns, **two corrected source header rows**, then verified export |
+| Native Excel | Microsoft Excel desktop 16.0.20326.20158, one synthetic blind export; forced recalculation, live formula edit/undo, eight rows and three merged regions passed. Codex-operated UI check, not human sign-off. |
 
 The Node engine accepts 22.19+ in the 22.x line and 24+, but only Node 24.19.0 has been exercised. Desktop, CLI-only UI, macOS/Linux, remote workspaces, other DSH releases, and real accounting datasets remain unverified.
 

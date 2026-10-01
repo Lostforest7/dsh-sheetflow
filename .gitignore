@@ -11,6 +11,7 @@ playwright-report/
 .env.*
 !.env.example
 .credentials.yaml
+~$*
 sheetflow-*.xlsx
 sheetflow-*.html
 sheetflow-*.json

@@ -1,6 +1,8 @@
 # 发布前人工验收指引（约 2 分钟）
 
-请在 Microsoft Excel 中手动打开 [本次导出文件](evidence/2026-10-01/sheetflow-5f0488c3-ca91-4fb4-a111-980b99fff04a.xlsx)，工作表为 **9月核销**。本次只由用户手动检查，不使用加载项或 Excel UI 自动化。
+请在 Microsoft Excel 中手动打开 [本次导出文件](evidence/2026-10-01/sheetflow-5f0488c3-ca91-4fb4-a111-980b99fff04a.xlsx)，工作表为 **9月核销**。以下指引保留供人工复核。
+
+**本轮执行结果：**2026-10-01，用户明确委托 Codex 使用电脑插件代操作 Microsoft Excel 原生界面，五项检查全部通过。未使用加载项；临时改值已撤销，关闭时选择“不保存”，文件 SHA-256 未变。这是 Codex 代操作的应用验收，不是用户本人手动签字。[原生截图与逐格结果](evidence/2026-10-01/excel-verification.json)。GitHub 发布仍等待用户按已约定门禁明确回复“Excel 检查通过”。
 
 文件相对路径：`docs/evidence/2026-10-01/sheetflow-5f0488c3-ca91-4fb4-a111-980b99fff04a.xlsx`。
 

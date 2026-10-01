@@ -8,6 +8,8 @@
 
 [English](README.md) · [兼容性与限制](docs/compatibility.md) · [验证记录](docs/validation.md) · [规则格式](docs/recipes.md)
 
+该盲测导出还通过了用户委托 Codex 代操作的原生 Microsoft Excel 检查：强制重算、公式动态改值及撤销、8 行明细、3 个合并区域全部通过。[截图与结果](docs/evidence/2026-10-01/excel-verification.json)。这是合成数据应用验收，不是用户本人财务签字。
+
 ![合成示例数据：月结数据、异常复核与来源追溯](docs/assets/review-workbench.png)
 
 *演示截图：合成示例数据。*
